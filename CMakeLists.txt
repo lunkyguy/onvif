@@ -8,7 +8,7 @@ add_definitions(-DWITH_OPENSSL)
 include_directories("include")
 
 # 添加库文件目录
-link_directories(${CMAKE_SOURCE_DIR}/lib)
+# link_directories(${CMAKE_SOURCE_DIR}/lib)
 #添加库文件目录
 # link_libraries("libeay32.lib")
 # link_libraries("ssleay32.lib")

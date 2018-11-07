@@ -21,8 +21,8 @@ using namespace std;
 #define MAX_LOGMSG_LEN 256 
 
 #ifdef WIN32
-#pragma comment(lib,"libeay32.lib")
-#pragma comment(lib,"ssleay32.lib")
+#pragma comment(lib,"lib/libeay32.lib")
+#pragma comment(lib,"lib/ssleay32.lib")
 #endif // WIN32
 
 void PrintErr(struct soap* _psoap)
