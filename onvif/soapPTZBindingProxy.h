@@ -41,14 +41,12 @@ class SOAP_CMAC PTZBindingProxy
 	/// Disables and removes SOAP Header from message
 	virtual	void soap_noheader();
 	/// Put SOAP Header in message
-	virtual	void soap_header(char *wsa__MessageID, struct wsa__Relationship *wsa__RelatesTo, struct wsa__EndpointReferenceType *wsa__From, struct wsa__EndpointReferenceType *wsa__ReplyTo, struct wsa__EndpointReferenceType *wsa__FaultTo, char *wsa__To, char *wsa__Action, struct wsdd__AppSequenceType *wsdd__AppSequence, char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct wsrm__SequenceType *wsrm__Sequence, int __sizeAckRequested, struct wsrm__AckRequestedType *wsrm__AckRequested, int __sizeSequenceAcknowledgement, struct _wsrm__SequenceAcknowledgement *wsrm__SequenceAcknowledgement, struct wsrm__SequenceFaultType *wsrm__SequenceFault, struct _wsse__Security *wsse__Security);
+	virtual	void soap_header(char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct _wsse__Security *wsse__Security);
 	/// Get SOAP Header structure (NULL when absent)
 	virtual	const SOAP_ENV__Header *soap_header();
 	/// Get SOAP Fault structure (NULL when absent)
-	/*virtual	const SOAP_ENV__Fault *soap_fault();*/  
+	virtual	const SOAP_ENV__Fault *soap_fault();
 	/// Get SOAP Fault string (NULL when absent)
- 
-
 	virtual	const char *soap_fault_string();
 	/// Get SOAP Fault detail as string (NULL when absent)
 	virtual	const char *soap_fault_detail();
@@ -139,6 +137,10 @@ class SOAP_CMAC PTZBindingProxy
 	/// Web service operation 'AbsoluteMove' (returns error code or SOAP_OK)
 	virtual	int AbsoluteMove(_tptz__AbsoluteMove *tptz__AbsoluteMove, _tptz__AbsoluteMoveResponse *tptz__AbsoluteMoveResponse) { return this->AbsoluteMove(NULL, NULL, tptz__AbsoluteMove, tptz__AbsoluteMoveResponse); }
 	virtual	int AbsoluteMove(const char *endpoint, const char *soap_action, _tptz__AbsoluteMove *tptz__AbsoluteMove, _tptz__AbsoluteMoveResponse *tptz__AbsoluteMoveResponse);
+
+	/// Web service operation 'GeoMove' (returns error code or SOAP_OK)
+	virtual	int GeoMove(_tptz__GeoMove *tptz__GeoMove, _tptz__GeoMoveResponse *tptz__GeoMoveResponse) { return this->GeoMove(NULL, NULL, tptz__GeoMove, tptz__GeoMoveResponse); }
+	virtual	int GeoMove(const char *endpoint, const char *soap_action, _tptz__GeoMove *tptz__GeoMove, _tptz__GeoMoveResponse *tptz__GeoMoveResponse);
 
 	/// Web service operation 'Stop' (returns error code or SOAP_OK)
 	virtual	int Stop(_tptz__Stop *tptz__Stop, _tptz__StopResponse *tptz__StopResponse) { return this->Stop(NULL, NULL, tptz__Stop, tptz__StopResponse); }

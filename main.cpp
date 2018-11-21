@@ -3,16 +3,13 @@
 #include  <openssl/rsa.h>
 #include "onvif/wsaapi.h"
 #include "onvif/wsseapi.h"
-#include "onvif/wsdd.nsmap"
+#include "onvif/DeviceBinding.nsmap"
 #include "onvif/errorlog.h"
 
 #include "onvif/soapDeviceBindingProxy.h"
 #include "onvif/soapMediaBindingProxy.h"
 #include "onvif/soapPTZBindingProxy.h"
-
-#include "onvif/soapPullPointSubscriptionBindingProxy.h"
-#include "onvif/soapRemoteDiscoveryBindingProxy.h" 
-
+#include "onvif/soapEventBindingProxy.h"
 using namespace std;
 
 #define DEV_PASSID "admin"
@@ -40,10 +37,9 @@ int main(int argc, char* argv[])
 	char sLogMsg[MAX_LOGMSG_LEN] = { 0 };
 
 	DeviceBindingProxy proxyDevice;
-	RemoteDiscoveryBindingProxy proxyDiscovery; 
 	MediaBindingProxy proxyMedia;
 	PTZBindingProxy proxyPTZ;
-	PullPointSubscriptionBindingProxy proxyEvent;
+	EventBindingProxy proxyEvent;
 
 	if (argc > 1)
 	{
@@ -60,7 +56,6 @@ int main(int argc, char* argv[])
 	}
 
 	soap_register_plugin(proxyDevice.soap, soap_wsse);
-	soap_register_plugin(proxyDiscovery.soap, soap_wsse);
 	soap_register_plugin(proxyMedia.soap, soap_wsse);
 	soap_register_plugin(proxyPTZ.soap, soap_wsse);
 	soap_register_plugin(proxyEvent.soap, soap_wsse);

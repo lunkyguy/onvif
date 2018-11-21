@@ -1,5 +1,12 @@
 ﻿# 添加包含目录
 #include_directories(../soap)
+#添加/bigobj
+if(WIN32)
+add_definitions(-DWIN32)
+set(CMAKE_CXX_FLAGS "/bigobj")
+set(CMAKE_C_FLAGS "/bigobj" )
+add_definitions("/EHsc")
+endif()
 #添加预处理器
 add_definitions(-DWITH_OPENSSL)
 # 查找当前目录下的所有源文件

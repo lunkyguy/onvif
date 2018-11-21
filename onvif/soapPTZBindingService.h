@@ -58,7 +58,7 @@ class SOAP_CMAC PTZBindingService
 	/// Disables and removes SOAP Header from message
 	virtual	void soap_noheader();
 	/// Put SOAP Header in message
-	virtual	void soap_header(char *wsa__MessageID, struct wsa__Relationship *wsa__RelatesTo, struct wsa__EndpointReferenceType *wsa__From, struct wsa__EndpointReferenceType *wsa__ReplyTo, struct wsa__EndpointReferenceType *wsa__FaultTo, char *wsa__To, char *wsa__Action, struct wsdd__AppSequenceType *wsdd__AppSequence, char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct wsrm__SequenceType *wsrm__Sequence, int __sizeAckRequested, struct wsrm__AckRequestedType *wsrm__AckRequested, int __sizeSequenceAcknowledgement, struct _wsrm__SequenceAcknowledgement *wsrm__SequenceAcknowledgement, struct wsrm__SequenceFaultType *wsrm__SequenceFault, struct _wsse__Security *wsse__Security);
+	virtual	void soap_header(char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct _wsse__Security *wsse__Security);
 	/// Get SOAP Header structure (NULL when absent)
 	virtual	const SOAP_ENV__Header *soap_header();
 	/// Run simple single-thread iterative service on port until a connection error occurs (returns error code or SOAP_OK), use this->bind_flag = SO_REUSEADDR to rebind for a rerun
@@ -134,6 +134,9 @@ class SOAP_CMAC PTZBindingService
 
 	/// Web service operation 'AbsoluteMove' (returns error code or SOAP_OK)
 	virtual	int AbsoluteMove(_tptz__AbsoluteMove *tptz__AbsoluteMove, _tptz__AbsoluteMoveResponse *tptz__AbsoluteMoveResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'GeoMove' (returns error code or SOAP_OK)
+	virtual	int GeoMove(_tptz__GeoMove *tptz__GeoMove, _tptz__GeoMoveResponse *tptz__GeoMoveResponse) SOAP_PURE_VIRTUAL;
 
 	/// Web service operation 'Stop' (returns error code or SOAP_OK)
 	virtual	int Stop(_tptz__Stop *tptz__Stop, _tptz__StopResponse *tptz__StopResponse) SOAP_PURE_VIRTUAL;

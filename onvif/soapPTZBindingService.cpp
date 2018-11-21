@@ -48,33 +48,60 @@ void PTZBindingService::PTZBindingService_init(soap_mode imode, soap_mode omode)
 	{"SOAP-ENC", "http://www.w3.org/2003/05/soap-encoding", "http://schemas.xmlsoap.org/soap/encoding/", NULL},
 	{"xsi", "http://www.w3.org/2001/XMLSchema-instance", "http://www.w3.org/*/XMLSchema-instance", NULL},
 	{"xsd", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/*/XMLSchema", NULL},
-	{"wsa", "http://schemas.xmlsoap.org/ws/2004/08/addressing", NULL, NULL},
-	{"wsdd", "http://schemas.xmlsoap.org/ws/2005/04/discovery", NULL, NULL},
 	{"chan", "http://schemas.microsoft.com/ws/2005/02/duplex", NULL, NULL},
 	{"wsa5", "http://www.w3.org/2005/08/addressing", "http://schemas.xmlsoap.org/ws/2004/08/addressing", NULL},
-	{"netrm", "http://schemas.microsoft.com/ws/2006/05/rm", NULL, NULL},
-	{"wsrm", "http://docs.oasis-open.org/ws-rx/wsrm/200702", NULL, NULL},
 	{"c14n", "http://www.w3.org/2001/10/xml-exc-c14n#", NULL, NULL},
 	{"wsu", "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd", NULL, NULL},
 	{"xenc", "http://www.w3.org/2001/04/xmlenc#", NULL, NULL},
 	{"wsc", "http://schemas.xmlsoap.org/ws/2005/02/sc", NULL, NULL},
 	{"ds", "http://www.w3.org/2000/09/xmldsig#", NULL, NULL},
 	{"wsse", "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd", "http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd", NULL},
+	{"ns2", "http://www.onvif.org/ver10/pacs", NULL, NULL},
 	{"xmime", "http://tempuri.org/xmime.xsd", NULL, NULL},
 	{"xop", "http://www.w3.org/2004/08/xop/include", NULL, NULL},
 	{"tt", "http://www.onvif.org/ver10/schema", NULL, NULL},
 	{"wsrfbf", "http://docs.oasis-open.org/wsrf/bf-2", NULL, NULL},
 	{"wstop", "http://docs.oasis-open.org/wsn/t-1", NULL, NULL},
 	{"wsrfr", "http://docs.oasis-open.org/wsrf/r-2", NULL, NULL},
-	{"ns1", "http://www.onvif.org/ver10/advancedsecurity/wsdl", NULL, NULL},
-	{"tdn", "http://www.onvif.org/ver10/network/wsdl", NULL, NULL},
-	{"tds", "http://www.onvif.org/ver10/device/wsdl", NULL, NULL},
-	{"tev", "http://www.onvif.org/ver10/events/wsdl", NULL, NULL},
+	{"name", "http://www.onvif.org/ver10/advancedsecurity/wsdl/AdvancedSecurityServiceBinding", NULL, NULL},
+	{"name10", "http://www.onvif.org/ver10/events/wsdl/NotificationProducerBinding", NULL, NULL},
+	{"name11", "http://www.onvif.org/ver10/events/wsdl/NotificationConsumerBinding", NULL, NULL},
+	{"name12", "http://www.onvif.org/ver10/events/wsdl/PullPointBinding", NULL, NULL},
+	{"name13", "http://www.onvif.org/ver10/events/wsdl/CreatePullPointBinding", NULL, NULL},
+	{"name14", "http://www.onvif.org/ver10/events/wsdl/PausableSubscriptionManagerBinding", NULL, NULL},
 	{"wsnt", "http://docs.oasis-open.org/wsn/b-2", NULL, NULL},
+	{"name2", "http://www.onvif.org/ver10/advancedsecurity/wsdl/KeystoreBinding", NULL, NULL},
+	{"name3", "http://www.onvif.org/ver10/advancedsecurity/wsdl/TLSServerBinding", NULL, NULL},
+	{"name4", "http://www.onvif.org/ver10/advancedsecurity/wsdl/Dot1XBinding", NULL, NULL},
+	{"ns5", "http://www.onvif.org/ver10/advancedsecurity/wsdl", NULL, NULL},
+	{"name5", "http://www.onvif.org/ver20/analytics/wsdl/RuleEngineBinding", NULL, NULL},
+	{"name6", "http://www.onvif.org/ver20/analytics/wsdl/AnalyticsEngineBinding", NULL, NULL},
+	{"tan", "http://www.onvif.org/ver20/analytics/wsdl", NULL, NULL},
+	{"name7", "http://www.onvif.org/ver10/events/wsdl/PullPointSubscriptionBinding", NULL, NULL},
+	{"name8", "http://www.onvif.org/ver10/events/wsdl/EventBinding", NULL, NULL},
+	{"tev", "http://www.onvif.org/ver10/events/wsdl", NULL, NULL},
+	{"name9", "http://www.onvif.org/ver10/events/wsdl/SubscriptionManagerBinding", NULL, NULL},
+	{"ns1", "http://www.onvif.org/ver10/accesscontrol/wsdl", NULL, NULL},
+	{"ns10", "http://www.onvif.org/ver10/provisioning/wsdl", NULL, NULL},
+	{"ns11", "http://www.onvif.org/ver10/schedule/wsdl", NULL, NULL},
+	{"ns12", "http://www.onvif.org/ver10/thermal/wsdl", NULL, NULL},
+	{"ns3", "http://www.onvif.org/ver10/accessrules/wsdl", NULL, NULL},
+	{"ns4", "http://www.onvif.org/ver10/actionengine/wsdl", NULL, NULL},
+	{"ns6", "http://www.onvif.org/ver10/authenticationbehavior/wsdl", NULL, NULL},
+	{"ns7", "http://www.onvif.org/ver10/credential/wsdl", NULL, NULL},
+	{"ns8", "http://www.onvif.org/ver10/doorcontrol/wsdl", NULL, NULL},
+	{"ns9", "http://www.onvif.org/ver20/media/wsdl", NULL, NULL},
+	{"tad", "http://www.onvif.org/ver10/analyticsdevice/wsdl", NULL, NULL},
+	{"tds", "http://www.onvif.org/ver10/device/wsdl", NULL, NULL},
 	{"timg", "http://www.onvif.org/ver20/imaging/wsdl", NULL, NULL},
+	{"tls", "http://www.onvif.org/ver10/display/wsdl", NULL, NULL},
 	{"tmd", "http://www.onvif.org/ver10/deviceIO/wsdl", NULL, NULL},
 	{"tptz", "http://www.onvif.org/ver20/ptz/wsdl", NULL, NULL},
+	{"trc", "http://www.onvif.org/ver10/recording/wsdl", NULL, NULL},
+	{"trp", "http://www.onvif.org/ver10/replay/wsdl", NULL, NULL},
 	{"trt", "http://www.onvif.org/ver10/media/wsdl", NULL, NULL},
+	{"trv", "http://www.onvif.org/ver10/receiver/wsdl", NULL, NULL},
+	{"tse", "http://www.onvif.org/ver10/search/wsdl", NULL, NULL},
 	{NULL, NULL, NULL, NULL}
 };
 	soap_set_namespaces(this->soap, namespaces);
@@ -145,16 +172,8 @@ void PTZBindingService::soap_noheader()
 {	this->soap->header = NULL;
 }
 
-void PTZBindingService::soap_header(char *wsa__MessageID, struct wsa__Relationship *wsa__RelatesTo, struct wsa__EndpointReferenceType *wsa__From, struct wsa__EndpointReferenceType *wsa__ReplyTo, struct wsa__EndpointReferenceType *wsa__FaultTo, char *wsa__To, char *wsa__Action, struct wsdd__AppSequenceType *wsdd__AppSequence, char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct wsrm__SequenceType *wsrm__Sequence, int __sizeAckRequested, struct wsrm__AckRequestedType *wsrm__AckRequested, int __sizeSequenceAcknowledgement, struct _wsrm__SequenceAcknowledgement *wsrm__SequenceAcknowledgement, struct wsrm__SequenceFaultType *wsrm__SequenceFault, struct _wsse__Security *wsse__Security)
+void PTZBindingService::soap_header(char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct _wsse__Security *wsse__Security)
 {	::soap_header(this->soap);
-	this->soap->header->wsa__MessageID = wsa__MessageID;
-	this->soap->header->wsa__RelatesTo = wsa__RelatesTo;
-	this->soap->header->wsa__From = wsa__From;
-	this->soap->header->wsa__ReplyTo = wsa__ReplyTo;
-	this->soap->header->wsa__FaultTo = wsa__FaultTo;
-	this->soap->header->wsa__To = wsa__To;
-	this->soap->header->wsa__Action = wsa__Action;
-	this->soap->header->wsdd__AppSequence = wsdd__AppSequence;
 	this->soap->header->wsa5__MessageID = wsa5__MessageID;
 	this->soap->header->wsa5__RelatesTo = wsa5__RelatesTo;
 	this->soap->header->wsa5__From = wsa5__From;
@@ -163,12 +182,6 @@ void PTZBindingService::soap_header(char *wsa__MessageID, struct wsa__Relationsh
 	this->soap->header->wsa5__To = wsa5__To;
 	this->soap->header->wsa5__Action = wsa5__Action;
 	this->soap->header->chan__ChannelInstance = chan__ChannelInstance;
-	this->soap->header->wsrm__Sequence = wsrm__Sequence;
-	this->soap->header->__sizeAckRequested = __sizeAckRequested;
-	this->soap->header->wsrm__AckRequested = wsrm__AckRequested;
-	this->soap->header->__sizeSequenceAcknowledgement = __sizeSequenceAcknowledgement;
-	this->soap->header->wsrm__SequenceAcknowledgement = wsrm__SequenceAcknowledgement;
-	this->soap->header->wsrm__SequenceFault = wsrm__SequenceFault;
 	this->soap->header->wsse__Security = wsse__Security;
 }
 
@@ -259,6 +272,7 @@ static int serve___tptz__ContinuousMove(PTZBindingService*);
 static int serve___tptz__RelativeMove(PTZBindingService*);
 static int serve___tptz__SendAuxiliaryCommand(PTZBindingService*);
 static int serve___tptz__AbsoluteMove(PTZBindingService*);
+static int serve___tptz__GeoMove(PTZBindingService*);
 static int serve___tptz__Stop(PTZBindingService*);
 static int serve___tptz__GetPresetTours(PTZBindingService*);
 static int serve___tptz__GetPresetTour(PTZBindingService*);
@@ -308,6 +322,8 @@ int PTZBindingService::dispatch()
 		return serve___tptz__SendAuxiliaryCommand(this);
 	if (!soap_match_tag(this->soap, this->soap->tag, "tptz:AbsoluteMove"))
 		return serve___tptz__AbsoluteMove(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tptz:GeoMove"))
+		return serve___tptz__GeoMove(this);
 	if (!soap_match_tag(this->soap, this->soap->tag, "tptz:Stop"))
 		return serve___tptz__Stop(this);
 	if (!soap_match_tag(this->soap, this->soap->tag, "tptz:GetPresetTours"))
@@ -1078,6 +1094,48 @@ static int serve___tptz__AbsoluteMove(PTZBindingService *service)
 	 || soap_putheader(soap)
 	 || soap_body_begin_out(soap)
 	 || tptz__AbsoluteMoveResponse.soap_put(soap, "tptz:AbsoluteMoveResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tptz__GeoMove(PTZBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tptz__GeoMove soap_tmp___tptz__GeoMove;
+	_tptz__GeoMoveResponse tptz__GeoMoveResponse;
+	tptz__GeoMoveResponse.soap_default(soap);
+	soap_default___tptz__GeoMove(soap, &soap_tmp___tptz__GeoMove);
+	if (!soap_get___tptz__GeoMove(soap, &soap_tmp___tptz__GeoMove, "-tptz:GeoMove", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->GeoMove(soap_tmp___tptz__GeoMove.tptz__GeoMove, &tptz__GeoMoveResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tptz__GeoMoveResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tptz__GeoMoveResponse.soap_put(soap, "tptz:GeoMoveResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tptz__GeoMoveResponse.soap_put(soap, "tptz:GeoMoveResponse", "")
 	 || soap_body_end_out(soap)
 	 || soap_envelope_end_out(soap)
 	 || soap_end_send(soap))

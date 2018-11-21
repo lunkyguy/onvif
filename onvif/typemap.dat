@@ -379,15 +379,6 @@ wsrfr	= "http://docs.oasis-open.org/wsrf/r-2"
 wsrfrw  = "http://docs.oasis-open.org/wsrf/rw-2"
 wstop	= "http://docs.oasis-open.org/wsn/t-1"
 
-#   SOAP-ENV mapping  
-SOAP_ENV__Envelope  = struct SOAP_ENV__Envelope { struct SOAP_ENV__Header *SOAP_ENV__Header; _XML SOAP_ENV__Body; }; | struct SOAP_ENV__Envelope  
-SOAP_ENV__Header    = | struct SOAP_ENV__Header  
-SOAP_ENV__Fault     = | struct SOAP_ENV__Fault  
-SOAP_ENV__Detail    = | struct SOAP_ENV__Detail  
-SOAP_ENV__Code      = | struct SOAP_ENV__Code  
-SOAP_ENV__Subcode   = | struct SOAP_ENV__Subcode  
-SOAP_ENV__Reason    = | struct SOAP_ENV__Reason 
-
 #	Prefix bindings for WhiteMesa interoperability testing round 2:
 
 i	= "http://soapinterop.org/"
@@ -400,4 +391,3 @@ aws	= "urn:PI/DevCentral/SoapService"
 #	Prefix binding for Mappoint Web services:
 
 mpt	= "http://s.mappoint.net/mappoint-30/"
-

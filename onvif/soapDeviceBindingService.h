@@ -58,7 +58,7 @@ class SOAP_CMAC DeviceBindingService
 	/// Disables and removes SOAP Header from message
 	virtual	void soap_noheader();
 	/// Put SOAP Header in message
-	virtual	void soap_header(char *wsa__MessageID, struct wsa__Relationship *wsa__RelatesTo, struct wsa__EndpointReferenceType *wsa__From, struct wsa__EndpointReferenceType *wsa__ReplyTo, struct wsa__EndpointReferenceType *wsa__FaultTo, char *wsa__To, char *wsa__Action, struct wsdd__AppSequenceType *wsdd__AppSequence, char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct wsrm__SequenceType *wsrm__Sequence, int __sizeAckRequested, struct wsrm__AckRequestedType *wsrm__AckRequested, int __sizeSequenceAcknowledgement, struct _wsrm__SequenceAcknowledgement *wsrm__SequenceAcknowledgement, struct wsrm__SequenceFaultType *wsrm__SequenceFault, struct _wsse__Security *wsse__Security);
+	virtual	void soap_header(char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct _wsse__Security *wsse__Security);
 	/// Get SOAP Header structure (NULL when absent)
 	virtual	const SOAP_ENV__Header *soap_header();
 	/// Run simple single-thread iterative service on port until a connection error occurs (returns error code or SOAP_OK), use this->bind_flag = SO_REUSEADDR to rebind for a rerun
@@ -327,6 +327,30 @@ class SOAP_CMAC DeviceBindingService
 	/// Web service operation 'StartSystemRestore' (returns error code or SOAP_OK)
 	virtual	int StartSystemRestore(_tds__StartSystemRestore *tds__StartSystemRestore, _tds__StartSystemRestoreResponse *tds__StartSystemRestoreResponse) SOAP_PURE_VIRTUAL;
 
+	/// Web service operation 'GetStorageConfigurations' (returns error code or SOAP_OK)
+	virtual	int GetStorageConfigurations(_tds__GetStorageConfigurations *tds__GetStorageConfigurations, _tds__GetStorageConfigurationsResponse *tds__GetStorageConfigurationsResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'CreateStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int CreateStorageConfiguration(_tds__CreateStorageConfiguration *tds__CreateStorageConfiguration, _tds__CreateStorageConfigurationResponse *tds__CreateStorageConfigurationResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'GetStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int GetStorageConfiguration(_tds__GetStorageConfiguration *tds__GetStorageConfiguration, _tds__GetStorageConfigurationResponse *tds__GetStorageConfigurationResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'SetStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int SetStorageConfiguration(_tds__SetStorageConfiguration *tds__SetStorageConfiguration, _tds__SetStorageConfigurationResponse *tds__SetStorageConfigurationResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'DeleteStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int DeleteStorageConfiguration(_tds__DeleteStorageConfiguration *tds__DeleteStorageConfiguration, _tds__DeleteStorageConfigurationResponse *tds__DeleteStorageConfigurationResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'GetGeoLocation' (returns error code or SOAP_OK)
+	virtual	int GetGeoLocation(_tds__GetGeoLocation *tds__GetGeoLocation, _tds__GetGeoLocationResponse *tds__GetGeoLocationResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'SetGeoLocation' (returns error code or SOAP_OK)
+	virtual	int SetGeoLocation(_tds__SetGeoLocation *tds__SetGeoLocation, _tds__SetGeoLocationResponse *tds__SetGeoLocationResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'DeleteGeoLocation' (returns error code or SOAP_OK)
+	virtual	int DeleteGeoLocation(_tds__DeleteGeoLocation *tds__DeleteGeoLocation, _tds__DeleteGeoLocationResponse *tds__DeleteGeoLocationResponse) SOAP_PURE_VIRTUAL;
+
 	/// Web service operation 'GetServices' (returns error code or SOAP_OK)
 	virtual	int GetServices_(_tds__GetServices *tds__GetServices, _tds__GetServicesResponse *tds__GetServicesResponse) SOAP_PURE_VIRTUAL;
 
@@ -572,5 +596,29 @@ class SOAP_CMAC DeviceBindingService
 
 	/// Web service operation 'StartSystemRestore' (returns error code or SOAP_OK)
 	virtual	int StartSystemRestore_(_tds__StartSystemRestore *tds__StartSystemRestore, _tds__StartSystemRestoreResponse *tds__StartSystemRestoreResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'GetStorageConfigurations' (returns error code or SOAP_OK)
+	virtual	int GetStorageConfigurations_(_tds__GetStorageConfigurations *tds__GetStorageConfigurations, _tds__GetStorageConfigurationsResponse *tds__GetStorageConfigurationsResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'CreateStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int CreateStorageConfiguration_(_tds__CreateStorageConfiguration *tds__CreateStorageConfiguration, _tds__CreateStorageConfigurationResponse *tds__CreateStorageConfigurationResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'GetStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int GetStorageConfiguration_(_tds__GetStorageConfiguration *tds__GetStorageConfiguration, _tds__GetStorageConfigurationResponse *tds__GetStorageConfigurationResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'SetStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int SetStorageConfiguration_(_tds__SetStorageConfiguration *tds__SetStorageConfiguration, _tds__SetStorageConfigurationResponse *tds__SetStorageConfigurationResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'DeleteStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int DeleteStorageConfiguration_(_tds__DeleteStorageConfiguration *tds__DeleteStorageConfiguration, _tds__DeleteStorageConfigurationResponse *tds__DeleteStorageConfigurationResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'GetGeoLocation' (returns error code or SOAP_OK)
+	virtual	int GetGeoLocation_(_tds__GetGeoLocation *tds__GetGeoLocation, _tds__GetGeoLocationResponse *tds__GetGeoLocationResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'SetGeoLocation' (returns error code or SOAP_OK)
+	virtual	int SetGeoLocation_(_tds__SetGeoLocation *tds__SetGeoLocation, _tds__SetGeoLocationResponse *tds__SetGeoLocationResponse) SOAP_PURE_VIRTUAL;
+
+	/// Web service operation 'DeleteGeoLocation' (returns error code or SOAP_OK)
+	virtual	int DeleteGeoLocation_(_tds__DeleteGeoLocation *tds__DeleteGeoLocation, _tds__DeleteGeoLocationResponse *tds__DeleteGeoLocationResponse) SOAP_PURE_VIRTUAL;
 };
 #endif

@@ -48,33 +48,60 @@ void DeviceBindingService::DeviceBindingService_init(soap_mode imode, soap_mode 
 	{"SOAP-ENC", "http://www.w3.org/2003/05/soap-encoding", "http://schemas.xmlsoap.org/soap/encoding/", NULL},
 	{"xsi", "http://www.w3.org/2001/XMLSchema-instance", "http://www.w3.org/*/XMLSchema-instance", NULL},
 	{"xsd", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/*/XMLSchema", NULL},
-	{"wsa", "http://schemas.xmlsoap.org/ws/2004/08/addressing", NULL, NULL},
-	{"wsdd", "http://schemas.xmlsoap.org/ws/2005/04/discovery", NULL, NULL},
 	{"chan", "http://schemas.microsoft.com/ws/2005/02/duplex", NULL, NULL},
 	{"wsa5", "http://www.w3.org/2005/08/addressing", "http://schemas.xmlsoap.org/ws/2004/08/addressing", NULL},
-	{"netrm", "http://schemas.microsoft.com/ws/2006/05/rm", NULL, NULL},
-	{"wsrm", "http://docs.oasis-open.org/ws-rx/wsrm/200702", NULL, NULL},
 	{"c14n", "http://www.w3.org/2001/10/xml-exc-c14n#", NULL, NULL},
 	{"wsu", "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd", NULL, NULL},
 	{"xenc", "http://www.w3.org/2001/04/xmlenc#", NULL, NULL},
 	{"wsc", "http://schemas.xmlsoap.org/ws/2005/02/sc", NULL, NULL},
 	{"ds", "http://www.w3.org/2000/09/xmldsig#", NULL, NULL},
 	{"wsse", "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd", "http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd", NULL},
+	{"ns2", "http://www.onvif.org/ver10/pacs", NULL, NULL},
 	{"xmime", "http://tempuri.org/xmime.xsd", NULL, NULL},
 	{"xop", "http://www.w3.org/2004/08/xop/include", NULL, NULL},
 	{"tt", "http://www.onvif.org/ver10/schema", NULL, NULL},
 	{"wsrfbf", "http://docs.oasis-open.org/wsrf/bf-2", NULL, NULL},
 	{"wstop", "http://docs.oasis-open.org/wsn/t-1", NULL, NULL},
 	{"wsrfr", "http://docs.oasis-open.org/wsrf/r-2", NULL, NULL},
-	{"ns1", "http://www.onvif.org/ver10/advancedsecurity/wsdl", NULL, NULL},
-	{"tdn", "http://www.onvif.org/ver10/network/wsdl", NULL, NULL},
-	{"tds", "http://www.onvif.org/ver10/device/wsdl", NULL, NULL},
-	{"tev", "http://www.onvif.org/ver10/events/wsdl", NULL, NULL},
+	{"name", "http://www.onvif.org/ver10/advancedsecurity/wsdl/AdvancedSecurityServiceBinding", NULL, NULL},
+	{"name10", "http://www.onvif.org/ver10/events/wsdl/NotificationProducerBinding", NULL, NULL},
+	{"name11", "http://www.onvif.org/ver10/events/wsdl/NotificationConsumerBinding", NULL, NULL},
+	{"name12", "http://www.onvif.org/ver10/events/wsdl/PullPointBinding", NULL, NULL},
+	{"name13", "http://www.onvif.org/ver10/events/wsdl/CreatePullPointBinding", NULL, NULL},
+	{"name14", "http://www.onvif.org/ver10/events/wsdl/PausableSubscriptionManagerBinding", NULL, NULL},
 	{"wsnt", "http://docs.oasis-open.org/wsn/b-2", NULL, NULL},
+	{"name2", "http://www.onvif.org/ver10/advancedsecurity/wsdl/KeystoreBinding", NULL, NULL},
+	{"name3", "http://www.onvif.org/ver10/advancedsecurity/wsdl/TLSServerBinding", NULL, NULL},
+	{"name4", "http://www.onvif.org/ver10/advancedsecurity/wsdl/Dot1XBinding", NULL, NULL},
+	{"ns5", "http://www.onvif.org/ver10/advancedsecurity/wsdl", NULL, NULL},
+	{"name5", "http://www.onvif.org/ver20/analytics/wsdl/RuleEngineBinding", NULL, NULL},
+	{"name6", "http://www.onvif.org/ver20/analytics/wsdl/AnalyticsEngineBinding", NULL, NULL},
+	{"tan", "http://www.onvif.org/ver20/analytics/wsdl", NULL, NULL},
+	{"name7", "http://www.onvif.org/ver10/events/wsdl/PullPointSubscriptionBinding", NULL, NULL},
+	{"name8", "http://www.onvif.org/ver10/events/wsdl/EventBinding", NULL, NULL},
+	{"tev", "http://www.onvif.org/ver10/events/wsdl", NULL, NULL},
+	{"name9", "http://www.onvif.org/ver10/events/wsdl/SubscriptionManagerBinding", NULL, NULL},
+	{"ns1", "http://www.onvif.org/ver10/accesscontrol/wsdl", NULL, NULL},
+	{"ns10", "http://www.onvif.org/ver10/provisioning/wsdl", NULL, NULL},
+	{"ns11", "http://www.onvif.org/ver10/schedule/wsdl", NULL, NULL},
+	{"ns12", "http://www.onvif.org/ver10/thermal/wsdl", NULL, NULL},
+	{"ns3", "http://www.onvif.org/ver10/accessrules/wsdl", NULL, NULL},
+	{"ns4", "http://www.onvif.org/ver10/actionengine/wsdl", NULL, NULL},
+	{"ns6", "http://www.onvif.org/ver10/authenticationbehavior/wsdl", NULL, NULL},
+	{"ns7", "http://www.onvif.org/ver10/credential/wsdl", NULL, NULL},
+	{"ns8", "http://www.onvif.org/ver10/doorcontrol/wsdl", NULL, NULL},
+	{"ns9", "http://www.onvif.org/ver20/media/wsdl", NULL, NULL},
+	{"tad", "http://www.onvif.org/ver10/analyticsdevice/wsdl", NULL, NULL},
+	{"tds", "http://www.onvif.org/ver10/device/wsdl", NULL, NULL},
 	{"timg", "http://www.onvif.org/ver20/imaging/wsdl", NULL, NULL},
+	{"tls", "http://www.onvif.org/ver10/display/wsdl", NULL, NULL},
 	{"tmd", "http://www.onvif.org/ver10/deviceIO/wsdl", NULL, NULL},
 	{"tptz", "http://www.onvif.org/ver20/ptz/wsdl", NULL, NULL},
+	{"trc", "http://www.onvif.org/ver10/recording/wsdl", NULL, NULL},
+	{"trp", "http://www.onvif.org/ver10/replay/wsdl", NULL, NULL},
 	{"trt", "http://www.onvif.org/ver10/media/wsdl", NULL, NULL},
+	{"trv", "http://www.onvif.org/ver10/receiver/wsdl", NULL, NULL},
+	{"tse", "http://www.onvif.org/ver10/search/wsdl", NULL, NULL},
 	{NULL, NULL, NULL, NULL}
 };
 	soap_set_namespaces(this->soap, namespaces);
@@ -145,16 +172,8 @@ void DeviceBindingService::soap_noheader()
 {	this->soap->header = NULL;
 }
 
-void DeviceBindingService::soap_header(char *wsa__MessageID, struct wsa__Relationship *wsa__RelatesTo, struct wsa__EndpointReferenceType *wsa__From, struct wsa__EndpointReferenceType *wsa__ReplyTo, struct wsa__EndpointReferenceType *wsa__FaultTo, char *wsa__To, char *wsa__Action, struct wsdd__AppSequenceType *wsdd__AppSequence, char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct wsrm__SequenceType *wsrm__Sequence, int __sizeAckRequested, struct wsrm__AckRequestedType *wsrm__AckRequested, int __sizeSequenceAcknowledgement, struct _wsrm__SequenceAcknowledgement *wsrm__SequenceAcknowledgement, struct wsrm__SequenceFaultType *wsrm__SequenceFault, struct _wsse__Security *wsse__Security)
+void DeviceBindingService::soap_header(char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct _wsse__Security *wsse__Security)
 {	::soap_header(this->soap);
-	this->soap->header->wsa__MessageID = wsa__MessageID;
-	this->soap->header->wsa__RelatesTo = wsa__RelatesTo;
-	this->soap->header->wsa__From = wsa__From;
-	this->soap->header->wsa__ReplyTo = wsa__ReplyTo;
-	this->soap->header->wsa__FaultTo = wsa__FaultTo;
-	this->soap->header->wsa__To = wsa__To;
-	this->soap->header->wsa__Action = wsa__Action;
-	this->soap->header->wsdd__AppSequence = wsdd__AppSequence;
 	this->soap->header->wsa5__MessageID = wsa5__MessageID;
 	this->soap->header->wsa5__RelatesTo = wsa5__RelatesTo;
 	this->soap->header->wsa5__From = wsa5__From;
@@ -163,12 +182,6 @@ void DeviceBindingService::soap_header(char *wsa__MessageID, struct wsa__Relatio
 	this->soap->header->wsa5__To = wsa5__To;
 	this->soap->header->wsa5__Action = wsa5__Action;
 	this->soap->header->chan__ChannelInstance = chan__ChannelInstance;
-	this->soap->header->wsrm__Sequence = wsrm__Sequence;
-	this->soap->header->__sizeAckRequested = __sizeAckRequested;
-	this->soap->header->wsrm__AckRequested = wsrm__AckRequested;
-	this->soap->header->__sizeSequenceAcknowledgement = __sizeSequenceAcknowledgement;
-	this->soap->header->wsrm__SequenceAcknowledgement = wsrm__SequenceAcknowledgement;
-	this->soap->header->wsrm__SequenceFault = wsrm__SequenceFault;
 	this->soap->header->wsse__Security = wsse__Security;
 }
 
@@ -323,6 +336,14 @@ static int serve___tds__ScanAvailableDot11Networks(DeviceBindingService*);
 static int serve___tds__GetSystemUris(DeviceBindingService*);
 static int serve___tds__StartFirmwareUpgrade(DeviceBindingService*);
 static int serve___tds__StartSystemRestore(DeviceBindingService*);
+static int serve___tds__GetStorageConfigurations(DeviceBindingService*);
+static int serve___tds__CreateStorageConfiguration(DeviceBindingService*);
+static int serve___tds__GetStorageConfiguration(DeviceBindingService*);
+static int serve___tds__SetStorageConfiguration(DeviceBindingService*);
+static int serve___tds__DeleteStorageConfiguration(DeviceBindingService*);
+static int serve___tds__GetGeoLocation(DeviceBindingService*);
+static int serve___tds__SetGeoLocation(DeviceBindingService*);
+static int serve___tds__DeleteGeoLocation(DeviceBindingService*);
 static int serve___tds__GetServices_(DeviceBindingService*);
 static int serve___tds__GetServiceCapabilities_(DeviceBindingService*);
 static int serve___tds__GetDeviceInformation_(DeviceBindingService*);
@@ -405,6 +426,14 @@ static int serve___tds__ScanAvailableDot11Networks_(DeviceBindingService*);
 static int serve___tds__GetSystemUris_(DeviceBindingService*);
 static int serve___tds__StartFirmwareUpgrade_(DeviceBindingService*);
 static int serve___tds__StartSystemRestore_(DeviceBindingService*);
+static int serve___tds__GetStorageConfigurations_(DeviceBindingService*);
+static int serve___tds__CreateStorageConfiguration_(DeviceBindingService*);
+static int serve___tds__GetStorageConfiguration_(DeviceBindingService*);
+static int serve___tds__SetStorageConfiguration_(DeviceBindingService*);
+static int serve___tds__DeleteStorageConfiguration_(DeviceBindingService*);
+static int serve___tds__GetGeoLocation_(DeviceBindingService*);
+static int serve___tds__SetGeoLocation_(DeviceBindingService*);
+static int serve___tds__DeleteGeoLocation_(DeviceBindingService*);
 
 int DeviceBindingService::dispatch()
 {	DeviceBindingService_init(this->soap->imode, this->soap->omode);
@@ -573,6 +602,22 @@ int DeviceBindingService::dispatch()
 		return serve___tds__StartFirmwareUpgrade(this);
 	if (!soap_match_tag(this->soap, this->soap->tag, "tds:StartSystemRestore"))
 		return serve___tds__StartSystemRestore(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:GetStorageConfigurations"))
+		return serve___tds__GetStorageConfigurations(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:CreateStorageConfiguration"))
+		return serve___tds__CreateStorageConfiguration(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:GetStorageConfiguration"))
+		return serve___tds__GetStorageConfiguration(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:SetStorageConfiguration"))
+		return serve___tds__SetStorageConfiguration(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:DeleteStorageConfiguration"))
+		return serve___tds__DeleteStorageConfiguration(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:GetGeoLocation"))
+		return serve___tds__GetGeoLocation(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:SetGeoLocation"))
+		return serve___tds__SetGeoLocation(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:DeleteGeoLocation"))
+		return serve___tds__DeleteGeoLocation(this);
 	if (!soap_match_tag(this->soap, this->soap->tag, "tds:GetServices"))
 		return serve___tds__GetServices_(this);
 	if (!soap_match_tag(this->soap, this->soap->tag, "tds:GetServiceCapabilities"))
@@ -737,6 +782,22 @@ int DeviceBindingService::dispatch()
 		return serve___tds__StartFirmwareUpgrade_(this);
 	if (!soap_match_tag(this->soap, this->soap->tag, "tds:StartSystemRestore"))
 		return serve___tds__StartSystemRestore_(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:GetStorageConfigurations"))
+		return serve___tds__GetStorageConfigurations_(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:CreateStorageConfiguration"))
+		return serve___tds__CreateStorageConfiguration_(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:GetStorageConfiguration"))
+		return serve___tds__GetStorageConfiguration_(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:SetStorageConfiguration"))
+		return serve___tds__SetStorageConfiguration_(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:DeleteStorageConfiguration"))
+		return serve___tds__DeleteStorageConfiguration_(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:GetGeoLocation"))
+		return serve___tds__GetGeoLocation_(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:SetGeoLocation"))
+		return serve___tds__SetGeoLocation_(this);
+	if (!soap_match_tag(this->soap, this->soap->tag, "tds:DeleteGeoLocation"))
+		return serve___tds__DeleteGeoLocation_(this);
 	return this->soap->error = SOAP_NO_METHOD;
 }
 
@@ -4184,6 +4245,342 @@ static int serve___tds__StartSystemRestore(DeviceBindingService *service)
 	return soap_closesock(soap);
 }
 
+static int serve___tds__GetStorageConfigurations(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__GetStorageConfigurations soap_tmp___tds__GetStorageConfigurations;
+	_tds__GetStorageConfigurationsResponse tds__GetStorageConfigurationsResponse;
+	tds__GetStorageConfigurationsResponse.soap_default(soap);
+	soap_default___tds__GetStorageConfigurations(soap, &soap_tmp___tds__GetStorageConfigurations);
+	if (!soap_get___tds__GetStorageConfigurations(soap, &soap_tmp___tds__GetStorageConfigurations, "-tds:GetStorageConfigurations", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->GetStorageConfigurations(soap_tmp___tds__GetStorageConfigurations.tds__GetStorageConfigurations, &tds__GetStorageConfigurationsResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__GetStorageConfigurationsResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__GetStorageConfigurationsResponse.soap_put(soap, "tds:GetStorageConfigurationsResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__GetStorageConfigurationsResponse.soap_put(soap, "tds:GetStorageConfigurationsResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__CreateStorageConfiguration(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__CreateStorageConfiguration soap_tmp___tds__CreateStorageConfiguration;
+	_tds__CreateStorageConfigurationResponse tds__CreateStorageConfigurationResponse;
+	tds__CreateStorageConfigurationResponse.soap_default(soap);
+	soap_default___tds__CreateStorageConfiguration(soap, &soap_tmp___tds__CreateStorageConfiguration);
+	if (!soap_get___tds__CreateStorageConfiguration(soap, &soap_tmp___tds__CreateStorageConfiguration, "-tds:CreateStorageConfiguration", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->CreateStorageConfiguration(soap_tmp___tds__CreateStorageConfiguration.tds__CreateStorageConfiguration, &tds__CreateStorageConfigurationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__CreateStorageConfigurationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__CreateStorageConfigurationResponse.soap_put(soap, "tds:CreateStorageConfigurationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__CreateStorageConfigurationResponse.soap_put(soap, "tds:CreateStorageConfigurationResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__GetStorageConfiguration(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__GetStorageConfiguration soap_tmp___tds__GetStorageConfiguration;
+	_tds__GetStorageConfigurationResponse tds__GetStorageConfigurationResponse;
+	tds__GetStorageConfigurationResponse.soap_default(soap);
+	soap_default___tds__GetStorageConfiguration(soap, &soap_tmp___tds__GetStorageConfiguration);
+	if (!soap_get___tds__GetStorageConfiguration(soap, &soap_tmp___tds__GetStorageConfiguration, "-tds:GetStorageConfiguration", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->GetStorageConfiguration(soap_tmp___tds__GetStorageConfiguration.tds__GetStorageConfiguration, &tds__GetStorageConfigurationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__GetStorageConfigurationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__GetStorageConfigurationResponse.soap_put(soap, "tds:GetStorageConfigurationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__GetStorageConfigurationResponse.soap_put(soap, "tds:GetStorageConfigurationResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__SetStorageConfiguration(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__SetStorageConfiguration soap_tmp___tds__SetStorageConfiguration;
+	_tds__SetStorageConfigurationResponse tds__SetStorageConfigurationResponse;
+	tds__SetStorageConfigurationResponse.soap_default(soap);
+	soap_default___tds__SetStorageConfiguration(soap, &soap_tmp___tds__SetStorageConfiguration);
+	if (!soap_get___tds__SetStorageConfiguration(soap, &soap_tmp___tds__SetStorageConfiguration, "-tds:SetStorageConfiguration", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->SetStorageConfiguration(soap_tmp___tds__SetStorageConfiguration.tds__SetStorageConfiguration, &tds__SetStorageConfigurationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__SetStorageConfigurationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__SetStorageConfigurationResponse.soap_put(soap, "tds:SetStorageConfigurationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__SetStorageConfigurationResponse.soap_put(soap, "tds:SetStorageConfigurationResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__DeleteStorageConfiguration(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__DeleteStorageConfiguration soap_tmp___tds__DeleteStorageConfiguration;
+	_tds__DeleteStorageConfigurationResponse tds__DeleteStorageConfigurationResponse;
+	tds__DeleteStorageConfigurationResponse.soap_default(soap);
+	soap_default___tds__DeleteStorageConfiguration(soap, &soap_tmp___tds__DeleteStorageConfiguration);
+	if (!soap_get___tds__DeleteStorageConfiguration(soap, &soap_tmp___tds__DeleteStorageConfiguration, "-tds:DeleteStorageConfiguration", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->DeleteStorageConfiguration(soap_tmp___tds__DeleteStorageConfiguration.tds__DeleteStorageConfiguration, &tds__DeleteStorageConfigurationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__DeleteStorageConfigurationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__DeleteStorageConfigurationResponse.soap_put(soap, "tds:DeleteStorageConfigurationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__DeleteStorageConfigurationResponse.soap_put(soap, "tds:DeleteStorageConfigurationResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__GetGeoLocation(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__GetGeoLocation soap_tmp___tds__GetGeoLocation;
+	_tds__GetGeoLocationResponse tds__GetGeoLocationResponse;
+	tds__GetGeoLocationResponse.soap_default(soap);
+	soap_default___tds__GetGeoLocation(soap, &soap_tmp___tds__GetGeoLocation);
+	if (!soap_get___tds__GetGeoLocation(soap, &soap_tmp___tds__GetGeoLocation, "-tds:GetGeoLocation", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->GetGeoLocation(soap_tmp___tds__GetGeoLocation.tds__GetGeoLocation, &tds__GetGeoLocationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__GetGeoLocationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__GetGeoLocationResponse.soap_put(soap, "tds:GetGeoLocationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__GetGeoLocationResponse.soap_put(soap, "tds:GetGeoLocationResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__SetGeoLocation(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__SetGeoLocation soap_tmp___tds__SetGeoLocation;
+	_tds__SetGeoLocationResponse tds__SetGeoLocationResponse;
+	tds__SetGeoLocationResponse.soap_default(soap);
+	soap_default___tds__SetGeoLocation(soap, &soap_tmp___tds__SetGeoLocation);
+	if (!soap_get___tds__SetGeoLocation(soap, &soap_tmp___tds__SetGeoLocation, "-tds:SetGeoLocation", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->SetGeoLocation(soap_tmp___tds__SetGeoLocation.tds__SetGeoLocation, &tds__SetGeoLocationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__SetGeoLocationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__SetGeoLocationResponse.soap_put(soap, "tds:SetGeoLocationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__SetGeoLocationResponse.soap_put(soap, "tds:SetGeoLocationResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__DeleteGeoLocation(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__DeleteGeoLocation soap_tmp___tds__DeleteGeoLocation;
+	_tds__DeleteGeoLocationResponse tds__DeleteGeoLocationResponse;
+	tds__DeleteGeoLocationResponse.soap_default(soap);
+	soap_default___tds__DeleteGeoLocation(soap, &soap_tmp___tds__DeleteGeoLocation);
+	if (!soap_get___tds__DeleteGeoLocation(soap, &soap_tmp___tds__DeleteGeoLocation, "-tds:DeleteGeoLocation", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->DeleteGeoLocation(soap_tmp___tds__DeleteGeoLocation.tds__DeleteGeoLocation, &tds__DeleteGeoLocationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__DeleteGeoLocationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__DeleteGeoLocationResponse.soap_put(soap, "tds:DeleteGeoLocationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__DeleteGeoLocationResponse.soap_put(soap, "tds:DeleteGeoLocationResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
 static int serve___tds__GetServices_(DeviceBindingService *service)
 {	struct soap *soap = service->soap;
 	struct __tds__GetServices_ soap_tmp___tds__GetServices_;
@@ -7621,6 +8018,342 @@ static int serve___tds__StartSystemRestore_(DeviceBindingService *service)
 	 || soap_putheader(soap)
 	 || soap_body_begin_out(soap)
 	 || tds__StartSystemRestoreResponse.soap_put(soap, "tds:StartSystemRestoreResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__GetStorageConfigurations_(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__GetStorageConfigurations_ soap_tmp___tds__GetStorageConfigurations_;
+	_tds__GetStorageConfigurationsResponse tds__GetStorageConfigurationsResponse;
+	tds__GetStorageConfigurationsResponse.soap_default(soap);
+	soap_default___tds__GetStorageConfigurations_(soap, &soap_tmp___tds__GetStorageConfigurations_);
+	if (!soap_get___tds__GetStorageConfigurations_(soap, &soap_tmp___tds__GetStorageConfigurations_, "-tds:GetStorageConfigurations", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->GetStorageConfigurations_(soap_tmp___tds__GetStorageConfigurations_.tds__GetStorageConfigurations, &tds__GetStorageConfigurationsResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__GetStorageConfigurationsResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__GetStorageConfigurationsResponse.soap_put(soap, "tds:GetStorageConfigurationsResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__GetStorageConfigurationsResponse.soap_put(soap, "tds:GetStorageConfigurationsResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__CreateStorageConfiguration_(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__CreateStorageConfiguration_ soap_tmp___tds__CreateStorageConfiguration_;
+	_tds__CreateStorageConfigurationResponse tds__CreateStorageConfigurationResponse;
+	tds__CreateStorageConfigurationResponse.soap_default(soap);
+	soap_default___tds__CreateStorageConfiguration_(soap, &soap_tmp___tds__CreateStorageConfiguration_);
+	if (!soap_get___tds__CreateStorageConfiguration_(soap, &soap_tmp___tds__CreateStorageConfiguration_, "-tds:CreateStorageConfiguration", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->CreateStorageConfiguration_(soap_tmp___tds__CreateStorageConfiguration_.tds__CreateStorageConfiguration, &tds__CreateStorageConfigurationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__CreateStorageConfigurationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__CreateStorageConfigurationResponse.soap_put(soap, "tds:CreateStorageConfigurationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__CreateStorageConfigurationResponse.soap_put(soap, "tds:CreateStorageConfigurationResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__GetStorageConfiguration_(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__GetStorageConfiguration_ soap_tmp___tds__GetStorageConfiguration_;
+	_tds__GetStorageConfigurationResponse tds__GetStorageConfigurationResponse;
+	tds__GetStorageConfigurationResponse.soap_default(soap);
+	soap_default___tds__GetStorageConfiguration_(soap, &soap_tmp___tds__GetStorageConfiguration_);
+	if (!soap_get___tds__GetStorageConfiguration_(soap, &soap_tmp___tds__GetStorageConfiguration_, "-tds:GetStorageConfiguration", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->GetStorageConfiguration_(soap_tmp___tds__GetStorageConfiguration_.tds__GetStorageConfiguration, &tds__GetStorageConfigurationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__GetStorageConfigurationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__GetStorageConfigurationResponse.soap_put(soap, "tds:GetStorageConfigurationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__GetStorageConfigurationResponse.soap_put(soap, "tds:GetStorageConfigurationResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__SetStorageConfiguration_(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__SetStorageConfiguration_ soap_tmp___tds__SetStorageConfiguration_;
+	_tds__SetStorageConfigurationResponse tds__SetStorageConfigurationResponse;
+	tds__SetStorageConfigurationResponse.soap_default(soap);
+	soap_default___tds__SetStorageConfiguration_(soap, &soap_tmp___tds__SetStorageConfiguration_);
+	if (!soap_get___tds__SetStorageConfiguration_(soap, &soap_tmp___tds__SetStorageConfiguration_, "-tds:SetStorageConfiguration", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->SetStorageConfiguration_(soap_tmp___tds__SetStorageConfiguration_.tds__SetStorageConfiguration, &tds__SetStorageConfigurationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__SetStorageConfigurationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__SetStorageConfigurationResponse.soap_put(soap, "tds:SetStorageConfigurationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__SetStorageConfigurationResponse.soap_put(soap, "tds:SetStorageConfigurationResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__DeleteStorageConfiguration_(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__DeleteStorageConfiguration_ soap_tmp___tds__DeleteStorageConfiguration_;
+	_tds__DeleteStorageConfigurationResponse tds__DeleteStorageConfigurationResponse;
+	tds__DeleteStorageConfigurationResponse.soap_default(soap);
+	soap_default___tds__DeleteStorageConfiguration_(soap, &soap_tmp___tds__DeleteStorageConfiguration_);
+	if (!soap_get___tds__DeleteStorageConfiguration_(soap, &soap_tmp___tds__DeleteStorageConfiguration_, "-tds:DeleteStorageConfiguration", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->DeleteStorageConfiguration_(soap_tmp___tds__DeleteStorageConfiguration_.tds__DeleteStorageConfiguration, &tds__DeleteStorageConfigurationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__DeleteStorageConfigurationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__DeleteStorageConfigurationResponse.soap_put(soap, "tds:DeleteStorageConfigurationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__DeleteStorageConfigurationResponse.soap_put(soap, "tds:DeleteStorageConfigurationResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__GetGeoLocation_(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__GetGeoLocation_ soap_tmp___tds__GetGeoLocation_;
+	_tds__GetGeoLocationResponse tds__GetGeoLocationResponse;
+	tds__GetGeoLocationResponse.soap_default(soap);
+	soap_default___tds__GetGeoLocation_(soap, &soap_tmp___tds__GetGeoLocation_);
+	if (!soap_get___tds__GetGeoLocation_(soap, &soap_tmp___tds__GetGeoLocation_, "-tds:GetGeoLocation", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->GetGeoLocation_(soap_tmp___tds__GetGeoLocation_.tds__GetGeoLocation, &tds__GetGeoLocationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__GetGeoLocationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__GetGeoLocationResponse.soap_put(soap, "tds:GetGeoLocationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__GetGeoLocationResponse.soap_put(soap, "tds:GetGeoLocationResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__SetGeoLocation_(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__SetGeoLocation_ soap_tmp___tds__SetGeoLocation_;
+	_tds__SetGeoLocationResponse tds__SetGeoLocationResponse;
+	tds__SetGeoLocationResponse.soap_default(soap);
+	soap_default___tds__SetGeoLocation_(soap, &soap_tmp___tds__SetGeoLocation_);
+	if (!soap_get___tds__SetGeoLocation_(soap, &soap_tmp___tds__SetGeoLocation_, "-tds:SetGeoLocation", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->SetGeoLocation_(soap_tmp___tds__SetGeoLocation_.tds__SetGeoLocation, &tds__SetGeoLocationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__SetGeoLocationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__SetGeoLocationResponse.soap_put(soap, "tds:SetGeoLocationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__SetGeoLocationResponse.soap_put(soap, "tds:SetGeoLocationResponse", "")
+	 || soap_body_end_out(soap)
+	 || soap_envelope_end_out(soap)
+	 || soap_end_send(soap))
+		return soap->error;
+	return soap_closesock(soap);
+}
+
+static int serve___tds__DeleteGeoLocation_(DeviceBindingService *service)
+{	struct soap *soap = service->soap;
+	struct __tds__DeleteGeoLocation_ soap_tmp___tds__DeleteGeoLocation_;
+	_tds__DeleteGeoLocationResponse tds__DeleteGeoLocationResponse;
+	tds__DeleteGeoLocationResponse.soap_default(soap);
+	soap_default___tds__DeleteGeoLocation_(soap, &soap_tmp___tds__DeleteGeoLocation_);
+	if (!soap_get___tds__DeleteGeoLocation_(soap, &soap_tmp___tds__DeleteGeoLocation_, "-tds:DeleteGeoLocation", NULL))
+		return soap->error;
+	if (soap_body_end_in(soap)
+	 || soap_envelope_end_in(soap)
+	 || soap_end_recv(soap))
+		return soap->error;
+	soap->error = service->DeleteGeoLocation_(soap_tmp___tds__DeleteGeoLocation_.tds__DeleteGeoLocation, &tds__DeleteGeoLocationResponse);
+	if (soap->error)
+		return soap->error;
+	soap->encodingStyle = NULL;
+	soap_serializeheader(soap);
+	tds__DeleteGeoLocationResponse.soap_serialize(soap);
+	if (soap_begin_count(soap))
+		return soap->error;
+	if (soap->mode & SOAP_IO_LENGTH)
+	{	if (soap_envelope_begin_out(soap)
+		 || soap_putheader(soap)
+		 || soap_body_begin_out(soap)
+		 || tds__DeleteGeoLocationResponse.soap_put(soap, "tds:DeleteGeoLocationResponse", "")
+		 || soap_body_end_out(soap)
+		 || soap_envelope_end_out(soap))
+			 return soap->error;
+	};
+	if (soap_end_count(soap)
+	 || soap_response(soap, SOAP_OK)
+	 || soap_envelope_begin_out(soap)
+	 || soap_putheader(soap)
+	 || soap_body_begin_out(soap)
+	 || tds__DeleteGeoLocationResponse.soap_put(soap, "tds:DeleteGeoLocationResponse", "")
 	 || soap_body_end_out(soap)
 	 || soap_envelope_end_out(soap)
 	 || soap_end_send(soap))

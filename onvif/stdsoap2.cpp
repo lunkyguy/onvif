@@ -1619,10 +1619,11 @@ soap_get_pi(struct soap *soap)
   /* This is a quick way to parse XML PI and we could use a callback instead to
    * enable applications to intercept processing instructions */
   while ((int)c != EOF && c != '?')
-  { if (--i > 0)
+  { if (i > 1)
     { if (soap_blank(c))
         c = ' ';
       *s++ = (char)c;
+      i--;
     }
     c = soap_getchar(soap);
   }

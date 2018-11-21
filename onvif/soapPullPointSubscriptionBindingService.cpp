@@ -48,33 +48,60 @@ void PullPointSubscriptionBindingService::PullPointSubscriptionBindingService_in
 	{"SOAP-ENC", "http://www.w3.org/2003/05/soap-encoding", "http://schemas.xmlsoap.org/soap/encoding/", NULL},
 	{"xsi", "http://www.w3.org/2001/XMLSchema-instance", "http://www.w3.org/*/XMLSchema-instance", NULL},
 	{"xsd", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/*/XMLSchema", NULL},
-	{"wsa", "http://schemas.xmlsoap.org/ws/2004/08/addressing", NULL, NULL},
-	{"wsdd", "http://schemas.xmlsoap.org/ws/2005/04/discovery", NULL, NULL},
 	{"chan", "http://schemas.microsoft.com/ws/2005/02/duplex", NULL, NULL},
 	{"wsa5", "http://www.w3.org/2005/08/addressing", "http://schemas.xmlsoap.org/ws/2004/08/addressing", NULL},
-	{"netrm", "http://schemas.microsoft.com/ws/2006/05/rm", NULL, NULL},
-	{"wsrm", "http://docs.oasis-open.org/ws-rx/wsrm/200702", NULL, NULL},
 	{"c14n", "http://www.w3.org/2001/10/xml-exc-c14n#", NULL, NULL},
 	{"wsu", "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd", NULL, NULL},
 	{"xenc", "http://www.w3.org/2001/04/xmlenc#", NULL, NULL},
 	{"wsc", "http://schemas.xmlsoap.org/ws/2005/02/sc", NULL, NULL},
 	{"ds", "http://www.w3.org/2000/09/xmldsig#", NULL, NULL},
 	{"wsse", "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd", "http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd", NULL},
+	{"ns2", "http://www.onvif.org/ver10/pacs", NULL, NULL},
 	{"xmime", "http://tempuri.org/xmime.xsd", NULL, NULL},
 	{"xop", "http://www.w3.org/2004/08/xop/include", NULL, NULL},
 	{"tt", "http://www.onvif.org/ver10/schema", NULL, NULL},
 	{"wsrfbf", "http://docs.oasis-open.org/wsrf/bf-2", NULL, NULL},
 	{"wstop", "http://docs.oasis-open.org/wsn/t-1", NULL, NULL},
 	{"wsrfr", "http://docs.oasis-open.org/wsrf/r-2", NULL, NULL},
-	{"ns1", "http://www.onvif.org/ver10/advancedsecurity/wsdl", NULL, NULL},
-	{"tdn", "http://www.onvif.org/ver10/network/wsdl", NULL, NULL},
-	{"tds", "http://www.onvif.org/ver10/device/wsdl", NULL, NULL},
-	{"tev", "http://www.onvif.org/ver10/events/wsdl", NULL, NULL},
+	{"name", "http://www.onvif.org/ver10/advancedsecurity/wsdl/AdvancedSecurityServiceBinding", NULL, NULL},
+	{"name10", "http://www.onvif.org/ver10/events/wsdl/NotificationProducerBinding", NULL, NULL},
+	{"name11", "http://www.onvif.org/ver10/events/wsdl/NotificationConsumerBinding", NULL, NULL},
+	{"name12", "http://www.onvif.org/ver10/events/wsdl/PullPointBinding", NULL, NULL},
+	{"name13", "http://www.onvif.org/ver10/events/wsdl/CreatePullPointBinding", NULL, NULL},
+	{"name14", "http://www.onvif.org/ver10/events/wsdl/PausableSubscriptionManagerBinding", NULL, NULL},
 	{"wsnt", "http://docs.oasis-open.org/wsn/b-2", NULL, NULL},
+	{"name2", "http://www.onvif.org/ver10/advancedsecurity/wsdl/KeystoreBinding", NULL, NULL},
+	{"name3", "http://www.onvif.org/ver10/advancedsecurity/wsdl/TLSServerBinding", NULL, NULL},
+	{"name4", "http://www.onvif.org/ver10/advancedsecurity/wsdl/Dot1XBinding", NULL, NULL},
+	{"ns5", "http://www.onvif.org/ver10/advancedsecurity/wsdl", NULL, NULL},
+	{"name5", "http://www.onvif.org/ver20/analytics/wsdl/RuleEngineBinding", NULL, NULL},
+	{"name6", "http://www.onvif.org/ver20/analytics/wsdl/AnalyticsEngineBinding", NULL, NULL},
+	{"tan", "http://www.onvif.org/ver20/analytics/wsdl", NULL, NULL},
+	{"name7", "http://www.onvif.org/ver10/events/wsdl/PullPointSubscriptionBinding", NULL, NULL},
+	{"name8", "http://www.onvif.org/ver10/events/wsdl/EventBinding", NULL, NULL},
+	{"tev", "http://www.onvif.org/ver10/events/wsdl", NULL, NULL},
+	{"name9", "http://www.onvif.org/ver10/events/wsdl/SubscriptionManagerBinding", NULL, NULL},
+	{"ns1", "http://www.onvif.org/ver10/accesscontrol/wsdl", NULL, NULL},
+	{"ns10", "http://www.onvif.org/ver10/provisioning/wsdl", NULL, NULL},
+	{"ns11", "http://www.onvif.org/ver10/schedule/wsdl", NULL, NULL},
+	{"ns12", "http://www.onvif.org/ver10/thermal/wsdl", NULL, NULL},
+	{"ns3", "http://www.onvif.org/ver10/accessrules/wsdl", NULL, NULL},
+	{"ns4", "http://www.onvif.org/ver10/actionengine/wsdl", NULL, NULL},
+	{"ns6", "http://www.onvif.org/ver10/authenticationbehavior/wsdl", NULL, NULL},
+	{"ns7", "http://www.onvif.org/ver10/credential/wsdl", NULL, NULL},
+	{"ns8", "http://www.onvif.org/ver10/doorcontrol/wsdl", NULL, NULL},
+	{"ns9", "http://www.onvif.org/ver20/media/wsdl", NULL, NULL},
+	{"tad", "http://www.onvif.org/ver10/analyticsdevice/wsdl", NULL, NULL},
+	{"tds", "http://www.onvif.org/ver10/device/wsdl", NULL, NULL},
 	{"timg", "http://www.onvif.org/ver20/imaging/wsdl", NULL, NULL},
+	{"tls", "http://www.onvif.org/ver10/display/wsdl", NULL, NULL},
 	{"tmd", "http://www.onvif.org/ver10/deviceIO/wsdl", NULL, NULL},
 	{"tptz", "http://www.onvif.org/ver20/ptz/wsdl", NULL, NULL},
+	{"trc", "http://www.onvif.org/ver10/recording/wsdl", NULL, NULL},
+	{"trp", "http://www.onvif.org/ver10/replay/wsdl", NULL, NULL},
 	{"trt", "http://www.onvif.org/ver10/media/wsdl", NULL, NULL},
+	{"trv", "http://www.onvif.org/ver10/receiver/wsdl", NULL, NULL},
+	{"tse", "http://www.onvif.org/ver10/search/wsdl", NULL, NULL},
 	{NULL, NULL, NULL, NULL}
 };
 	soap_set_namespaces(this->soap, namespaces);
@@ -145,16 +172,8 @@ void PullPointSubscriptionBindingService::soap_noheader()
 {	this->soap->header = NULL;
 }
 
-void PullPointSubscriptionBindingService::soap_header(char *wsa__MessageID, struct wsa__Relationship *wsa__RelatesTo, struct wsa__EndpointReferenceType *wsa__From, struct wsa__EndpointReferenceType *wsa__ReplyTo, struct wsa__EndpointReferenceType *wsa__FaultTo, char *wsa__To, char *wsa__Action, struct wsdd__AppSequenceType *wsdd__AppSequence, char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct wsrm__SequenceType *wsrm__Sequence, int __sizeAckRequested, struct wsrm__AckRequestedType *wsrm__AckRequested, int __sizeSequenceAcknowledgement, struct _wsrm__SequenceAcknowledgement *wsrm__SequenceAcknowledgement, struct wsrm__SequenceFaultType *wsrm__SequenceFault, struct _wsse__Security *wsse__Security)
+void PullPointSubscriptionBindingService::soap_header(char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct _wsse__Security *wsse__Security)
 {	::soap_header(this->soap);
-	this->soap->header->wsa__MessageID = wsa__MessageID;
-	this->soap->header->wsa__RelatesTo = wsa__RelatesTo;
-	this->soap->header->wsa__From = wsa__From;
-	this->soap->header->wsa__ReplyTo = wsa__ReplyTo;
-	this->soap->header->wsa__FaultTo = wsa__FaultTo;
-	this->soap->header->wsa__To = wsa__To;
-	this->soap->header->wsa__Action = wsa__Action;
-	this->soap->header->wsdd__AppSequence = wsdd__AppSequence;
 	this->soap->header->wsa5__MessageID = wsa5__MessageID;
 	this->soap->header->wsa5__RelatesTo = wsa5__RelatesTo;
 	this->soap->header->wsa5__From = wsa5__From;
@@ -163,12 +182,6 @@ void PullPointSubscriptionBindingService::soap_header(char *wsa__MessageID, stru
 	this->soap->header->wsa5__To = wsa5__To;
 	this->soap->header->wsa5__Action = wsa5__Action;
 	this->soap->header->chan__ChannelInstance = chan__ChannelInstance;
-	this->soap->header->wsrm__Sequence = wsrm__Sequence;
-	this->soap->header->__sizeAckRequested = __sizeAckRequested;
-	this->soap->header->wsrm__AckRequested = wsrm__AckRequested;
-	this->soap->header->__sizeSequenceAcknowledgement = __sizeSequenceAcknowledgement;
-	this->soap->header->wsrm__SequenceAcknowledgement = wsrm__SequenceAcknowledgement;
-	this->soap->header->wsrm__SequenceFault = wsrm__SequenceFault;
 	this->soap->header->wsse__Security = wsse__Security;
 }
 
@@ -241,83 +254,38 @@ int PullPointSubscriptionBindingService::serve()
 	return SOAP_OK;
 }
 
-static int serve___tev__PullMessages(PullPointSubscriptionBindingService*);
-static int serve___tev__Seek(PullPointSubscriptionBindingService*);
-static int serve___tev__SetSynchronizationPoint(PullPointSubscriptionBindingService*);
-static int serve___tev__GetServiceCapabilities(PullPointSubscriptionBindingService*);
-static int serve___tev__CreatePullPointSubscription(PullPointSubscriptionBindingService*);
-static int serve___tev__GetEventProperties(PullPointSubscriptionBindingService*);
-static int serve___tev__Renew(PullPointSubscriptionBindingService*);
-static int serve___tev__Unsubscribe(PullPointSubscriptionBindingService*);
-static int serve___tev__Subscribe(PullPointSubscriptionBindingService*);
-static int serve___tev__GetCurrentMessage(PullPointSubscriptionBindingService*);
-static int serve___tev__Notify(PullPointSubscriptionBindingService*);
-static int serve___tev__GetMessages(PullPointSubscriptionBindingService*);
-static int serve___tev__DestroyPullPoint(PullPointSubscriptionBindingService*);
-static int serve___tev__Notify_(PullPointSubscriptionBindingService*);
-static int serve___tev__CreatePullPoint(PullPointSubscriptionBindingService*);
-static int serve___tev__Renew_(PullPointSubscriptionBindingService*);
-static int serve___tev__Unsubscribe_(PullPointSubscriptionBindingService*);
-static int serve___tev__PauseSubscription(PullPointSubscriptionBindingService*);
-static int serve___tev__ResumeSubscription(PullPointSubscriptionBindingService*);
+static int serve___name7__PullMessages(PullPointSubscriptionBindingService*);
+static int serve___name7__Seek(PullPointSubscriptionBindingService*);
+static int serve___name7__SetSynchronizationPoint(PullPointSubscriptionBindingService*);
+static int serve___name7__Unsubscribe(PullPointSubscriptionBindingService*);
 
 int PullPointSubscriptionBindingService::dispatch()
 {	PullPointSubscriptionBindingService_init(this->soap->imode, this->soap->omode);
 	soap_peek_element(this->soap);
 	if (!soap_match_tag(this->soap, this->soap->tag, "tev:PullMessages"))
-		return serve___tev__PullMessages(this);
+		return serve___name7__PullMessages(this);
 	if (!soap_match_tag(this->soap, this->soap->tag, "tev:Seek"))
-		return serve___tev__Seek(this);
+		return serve___name7__Seek(this);
 	if (!soap_match_tag(this->soap, this->soap->tag, "tev:SetSynchronizationPoint"))
-		return serve___tev__SetSynchronizationPoint(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "tev:GetServiceCapabilities"))
-		return serve___tev__GetServiceCapabilities(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "tev:CreatePullPointSubscription"))
-		return serve___tev__CreatePullPointSubscription(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "tev:GetEventProperties"))
-		return serve___tev__GetEventProperties(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "wsnt:Renew"))
-		return serve___tev__Renew(this);
+		return serve___name7__SetSynchronizationPoint(this);
 	if (!soap_match_tag(this->soap, this->soap->tag, "wsnt:Unsubscribe"))
-		return serve___tev__Unsubscribe(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "wsnt:Subscribe"))
-		return serve___tev__Subscribe(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "wsnt:GetCurrentMessage"))
-		return serve___tev__GetCurrentMessage(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "wsnt:Notify"))
-		return serve___tev__Notify(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "wsnt:GetMessages"))
-		return serve___tev__GetMessages(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "wsnt:DestroyPullPoint"))
-		return serve___tev__DestroyPullPoint(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "wsnt:Notify"))
-		return serve___tev__Notify_(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "wsnt:CreatePullPoint"))
-		return serve___tev__CreatePullPoint(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "wsnt:Renew"))
-		return serve___tev__Renew_(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "wsnt:Unsubscribe"))
-		return serve___tev__Unsubscribe_(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "wsnt:PauseSubscription"))
-		return serve___tev__PauseSubscription(this);
-	if (!soap_match_tag(this->soap, this->soap->tag, "wsnt:ResumeSubscription"))
-		return serve___tev__ResumeSubscription(this);
+		return serve___name7__Unsubscribe(this);
 	return this->soap->error = SOAP_NO_METHOD;
 }
 
-static int serve___tev__PullMessages(PullPointSubscriptionBindingService *service)
+static int serve___name7__PullMessages(PullPointSubscriptionBindingService *service)
 {	struct soap *soap = service->soap;
-	struct __tev__PullMessages soap_tmp___tev__PullMessages;
+	struct __name7__PullMessages soap_tmp___name7__PullMessages;
 	_tev__PullMessagesResponse tev__PullMessagesResponse;
 	tev__PullMessagesResponse.soap_default(soap);
-	soap_default___tev__PullMessages(soap, &soap_tmp___tev__PullMessages);
-	if (!soap_get___tev__PullMessages(soap, &soap_tmp___tev__PullMessages, "-tev:PullMessages", NULL))
+	soap_default___name7__PullMessages(soap, &soap_tmp___name7__PullMessages);
+	if (!soap_get___name7__PullMessages(soap, &soap_tmp___name7__PullMessages, "-name7:PullMessages", NULL))
 		return soap->error;
 	if (soap_body_end_in(soap)
 	 || soap_envelope_end_in(soap)
 	 || soap_end_recv(soap))
 		return soap->error;
-	soap->error = service->PullMessages(soap_tmp___tev__PullMessages.tev__PullMessages, &tev__PullMessagesResponse);
+	soap->error = service->PullMessages(soap_tmp___name7__PullMessages.tev__PullMessages, &tev__PullMessagesResponse);
 	if (soap->error)
 		return soap->error;
 	soap->encodingStyle = NULL;
@@ -347,19 +315,19 @@ static int serve___tev__PullMessages(PullPointSubscriptionBindingService *servic
 	return soap_closesock(soap);
 }
 
-static int serve___tev__Seek(PullPointSubscriptionBindingService *service)
+static int serve___name7__Seek(PullPointSubscriptionBindingService *service)
 {	struct soap *soap = service->soap;
-	struct __tev__Seek soap_tmp___tev__Seek;
+	struct __name7__Seek soap_tmp___name7__Seek;
 	_tev__SeekResponse tev__SeekResponse;
 	tev__SeekResponse.soap_default(soap);
-	soap_default___tev__Seek(soap, &soap_tmp___tev__Seek);
-	if (!soap_get___tev__Seek(soap, &soap_tmp___tev__Seek, "-tev:Seek", NULL))
+	soap_default___name7__Seek(soap, &soap_tmp___name7__Seek);
+	if (!soap_get___name7__Seek(soap, &soap_tmp___name7__Seek, "-name7:Seek", NULL))
 		return soap->error;
 	if (soap_body_end_in(soap)
 	 || soap_envelope_end_in(soap)
 	 || soap_end_recv(soap))
 		return soap->error;
-	soap->error = service->Seek(soap_tmp___tev__Seek.tev__Seek, &tev__SeekResponse);
+	soap->error = service->Seek(soap_tmp___name7__Seek.tev__Seek, &tev__SeekResponse);
 	if (soap->error)
 		return soap->error;
 	soap->encodingStyle = NULL;
@@ -389,19 +357,19 @@ static int serve___tev__Seek(PullPointSubscriptionBindingService *service)
 	return soap_closesock(soap);
 }
 
-static int serve___tev__SetSynchronizationPoint(PullPointSubscriptionBindingService *service)
+static int serve___name7__SetSynchronizationPoint(PullPointSubscriptionBindingService *service)
 {	struct soap *soap = service->soap;
-	struct __tev__SetSynchronizationPoint soap_tmp___tev__SetSynchronizationPoint;
+	struct __name7__SetSynchronizationPoint soap_tmp___name7__SetSynchronizationPoint;
 	_tev__SetSynchronizationPointResponse tev__SetSynchronizationPointResponse;
 	tev__SetSynchronizationPointResponse.soap_default(soap);
-	soap_default___tev__SetSynchronizationPoint(soap, &soap_tmp___tev__SetSynchronizationPoint);
-	if (!soap_get___tev__SetSynchronizationPoint(soap, &soap_tmp___tev__SetSynchronizationPoint, "-tev:SetSynchronizationPoint", NULL))
+	soap_default___name7__SetSynchronizationPoint(soap, &soap_tmp___name7__SetSynchronizationPoint);
+	if (!soap_get___name7__SetSynchronizationPoint(soap, &soap_tmp___name7__SetSynchronizationPoint, "-name7:SetSynchronizationPoint", NULL))
 		return soap->error;
 	if (soap_body_end_in(soap)
 	 || soap_envelope_end_in(soap)
 	 || soap_end_recv(soap))
 		return soap->error;
-	soap->error = service->SetSynchronizationPoint(soap_tmp___tev__SetSynchronizationPoint.tev__SetSynchronizationPoint, &tev__SetSynchronizationPointResponse);
+	soap->error = service->SetSynchronizationPoint(soap_tmp___name7__SetSynchronizationPoint.tev__SetSynchronizationPoint, &tev__SetSynchronizationPointResponse);
 	if (soap->error)
 		return soap->error;
 	soap->encodingStyle = NULL;
@@ -431,187 +399,19 @@ static int serve___tev__SetSynchronizationPoint(PullPointSubscriptionBindingServ
 	return soap_closesock(soap);
 }
 
-static int serve___tev__GetServiceCapabilities(PullPointSubscriptionBindingService *service)
+static int serve___name7__Unsubscribe(PullPointSubscriptionBindingService *service)
 {	struct soap *soap = service->soap;
-	struct __tev__GetServiceCapabilities soap_tmp___tev__GetServiceCapabilities;
-	_tev__GetServiceCapabilitiesResponse tev__GetServiceCapabilitiesResponse;
-	tev__GetServiceCapabilitiesResponse.soap_default(soap);
-	soap_default___tev__GetServiceCapabilities(soap, &soap_tmp___tev__GetServiceCapabilities);
-	if (!soap_get___tev__GetServiceCapabilities(soap, &soap_tmp___tev__GetServiceCapabilities, "-tev:GetServiceCapabilities", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->GetServiceCapabilities(soap_tmp___tev__GetServiceCapabilities.tev__GetServiceCapabilities, &tev__GetServiceCapabilitiesResponse);
-	if (soap->error)
-		return soap->error;
-	soap->encodingStyle = NULL;
-	soap_serializeheader(soap);
-	tev__GetServiceCapabilitiesResponse.soap_serialize(soap);
-	if (soap_begin_count(soap))
-		return soap->error;
-	if (soap->mode & SOAP_IO_LENGTH)
-	{	if (soap_envelope_begin_out(soap)
-		 || soap_putheader(soap)
-		 || soap_body_begin_out(soap)
-		 || tev__GetServiceCapabilitiesResponse.soap_put(soap, "tev:GetServiceCapabilitiesResponse", "")
-		 || soap_body_end_out(soap)
-		 || soap_envelope_end_out(soap))
-			 return soap->error;
-	};
-	if (soap_end_count(soap)
-	 || soap_response(soap, SOAP_OK)
-	 || soap_envelope_begin_out(soap)
-	 || soap_putheader(soap)
-	 || soap_body_begin_out(soap)
-	 || tev__GetServiceCapabilitiesResponse.soap_put(soap, "tev:GetServiceCapabilitiesResponse", "")
-	 || soap_body_end_out(soap)
-	 || soap_envelope_end_out(soap)
-	 || soap_end_send(soap))
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__CreatePullPointSubscription(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__CreatePullPointSubscription soap_tmp___tev__CreatePullPointSubscription;
-	_tev__CreatePullPointSubscriptionResponse tev__CreatePullPointSubscriptionResponse;
-	tev__CreatePullPointSubscriptionResponse.soap_default(soap);
-	soap_default___tev__CreatePullPointSubscription(soap, &soap_tmp___tev__CreatePullPointSubscription);
-	if (!soap_get___tev__CreatePullPointSubscription(soap, &soap_tmp___tev__CreatePullPointSubscription, "-tev:CreatePullPointSubscription", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->CreatePullPointSubscription(soap_tmp___tev__CreatePullPointSubscription.tev__CreatePullPointSubscription, &tev__CreatePullPointSubscriptionResponse);
-	if (soap->error)
-		return soap->error;
-	soap->encodingStyle = NULL;
-	soap_serializeheader(soap);
-	tev__CreatePullPointSubscriptionResponse.soap_serialize(soap);
-	if (soap_begin_count(soap))
-		return soap->error;
-	if (soap->mode & SOAP_IO_LENGTH)
-	{	if (soap_envelope_begin_out(soap)
-		 || soap_putheader(soap)
-		 || soap_body_begin_out(soap)
-		 || tev__CreatePullPointSubscriptionResponse.soap_put(soap, "tev:CreatePullPointSubscriptionResponse", "")
-		 || soap_body_end_out(soap)
-		 || soap_envelope_end_out(soap))
-			 return soap->error;
-	};
-	if (soap_end_count(soap)
-	 || soap_response(soap, SOAP_OK)
-	 || soap_envelope_begin_out(soap)
-	 || soap_putheader(soap)
-	 || soap_body_begin_out(soap)
-	 || tev__CreatePullPointSubscriptionResponse.soap_put(soap, "tev:CreatePullPointSubscriptionResponse", "")
-	 || soap_body_end_out(soap)
-	 || soap_envelope_end_out(soap)
-	 || soap_end_send(soap))
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__GetEventProperties(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__GetEventProperties soap_tmp___tev__GetEventProperties;
-	_tev__GetEventPropertiesResponse tev__GetEventPropertiesResponse;
-	tev__GetEventPropertiesResponse.soap_default(soap);
-	soap_default___tev__GetEventProperties(soap, &soap_tmp___tev__GetEventProperties);
-	if (!soap_get___tev__GetEventProperties(soap, &soap_tmp___tev__GetEventProperties, "-tev:GetEventProperties", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->GetEventProperties(soap_tmp___tev__GetEventProperties.tev__GetEventProperties, &tev__GetEventPropertiesResponse);
-	if (soap->error)
-		return soap->error;
-	soap->encodingStyle = NULL;
-	soap_serializeheader(soap);
-	tev__GetEventPropertiesResponse.soap_serialize(soap);
-	if (soap_begin_count(soap))
-		return soap->error;
-	if (soap->mode & SOAP_IO_LENGTH)
-	{	if (soap_envelope_begin_out(soap)
-		 || soap_putheader(soap)
-		 || soap_body_begin_out(soap)
-		 || tev__GetEventPropertiesResponse.soap_put(soap, "tev:GetEventPropertiesResponse", "")
-		 || soap_body_end_out(soap)
-		 || soap_envelope_end_out(soap))
-			 return soap->error;
-	};
-	if (soap_end_count(soap)
-	 || soap_response(soap, SOAP_OK)
-	 || soap_envelope_begin_out(soap)
-	 || soap_putheader(soap)
-	 || soap_body_begin_out(soap)
-	 || tev__GetEventPropertiesResponse.soap_put(soap, "tev:GetEventPropertiesResponse", "")
-	 || soap_body_end_out(soap)
-	 || soap_envelope_end_out(soap)
-	 || soap_end_send(soap))
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__Renew(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__Renew soap_tmp___tev__Renew;
-	_wsnt__RenewResponse wsnt__RenewResponse;
-	wsnt__RenewResponse.soap_default(soap);
-	soap_default___tev__Renew(soap, &soap_tmp___tev__Renew);
-	if (!soap_get___tev__Renew(soap, &soap_tmp___tev__Renew, "-tev:Renew", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->Renew(soap_tmp___tev__Renew.wsnt__Renew, &wsnt__RenewResponse);
-	if (soap->error)
-		return soap->error;
-	soap->encodingStyle = NULL;
-	soap_serializeheader(soap);
-	wsnt__RenewResponse.soap_serialize(soap);
-	if (soap_begin_count(soap))
-		return soap->error;
-	if (soap->mode & SOAP_IO_LENGTH)
-	{	if (soap_envelope_begin_out(soap)
-		 || soap_putheader(soap)
-		 || soap_body_begin_out(soap)
-		 || wsnt__RenewResponse.soap_put(soap, "wsnt:RenewResponse", "")
-		 || soap_body_end_out(soap)
-		 || soap_envelope_end_out(soap))
-			 return soap->error;
-	};
-	if (soap_end_count(soap)
-	 || soap_response(soap, SOAP_OK)
-	 || soap_envelope_begin_out(soap)
-	 || soap_putheader(soap)
-	 || soap_body_begin_out(soap)
-	 || wsnt__RenewResponse.soap_put(soap, "wsnt:RenewResponse", "")
-	 || soap_body_end_out(soap)
-	 || soap_envelope_end_out(soap)
-	 || soap_end_send(soap))
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__Unsubscribe(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__Unsubscribe soap_tmp___tev__Unsubscribe;
+	struct __name7__Unsubscribe soap_tmp___name7__Unsubscribe;
 	_wsnt__UnsubscribeResponse wsnt__UnsubscribeResponse;
 	wsnt__UnsubscribeResponse.soap_default(soap);
-	soap_default___tev__Unsubscribe(soap, &soap_tmp___tev__Unsubscribe);
-	if (!soap_get___tev__Unsubscribe(soap, &soap_tmp___tev__Unsubscribe, "-tev:Unsubscribe", NULL))
+	soap_default___name7__Unsubscribe(soap, &soap_tmp___name7__Unsubscribe);
+	if (!soap_get___name7__Unsubscribe(soap, &soap_tmp___name7__Unsubscribe, "-name7:Unsubscribe", NULL))
 		return soap->error;
 	if (soap_body_end_in(soap)
 	 || soap_envelope_end_in(soap)
 	 || soap_end_recv(soap))
 		return soap->error;
-	soap->error = service->Unsubscribe(soap_tmp___tev__Unsubscribe.wsnt__Unsubscribe, &wsnt__UnsubscribeResponse);
+	soap->error = service->Unsubscribe(soap_tmp___name7__Unsubscribe.wsnt__Unsubscribe, &wsnt__UnsubscribeResponse);
 	if (soap->error)
 		return soap->error;
 	soap->encodingStyle = NULL;
@@ -634,416 +434,6 @@ static int serve___tev__Unsubscribe(PullPointSubscriptionBindingService *service
 	 || soap_putheader(soap)
 	 || soap_body_begin_out(soap)
 	 || wsnt__UnsubscribeResponse.soap_put(soap, "wsnt:UnsubscribeResponse", "")
-	 || soap_body_end_out(soap)
-	 || soap_envelope_end_out(soap)
-	 || soap_end_send(soap))
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__Subscribe(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__Subscribe soap_tmp___tev__Subscribe;
-	_wsnt__SubscribeResponse wsnt__SubscribeResponse;
-	wsnt__SubscribeResponse.soap_default(soap);
-	soap_default___tev__Subscribe(soap, &soap_tmp___tev__Subscribe);
-	if (!soap_get___tev__Subscribe(soap, &soap_tmp___tev__Subscribe, "-tev:Subscribe", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->Subscribe(soap_tmp___tev__Subscribe.wsnt__Subscribe, &wsnt__SubscribeResponse);
-	if (soap->error)
-		return soap->error;
-	soap->encodingStyle = NULL;
-	soap_serializeheader(soap);
-	wsnt__SubscribeResponse.soap_serialize(soap);
-	if (soap_begin_count(soap))
-		return soap->error;
-	if (soap->mode & SOAP_IO_LENGTH)
-	{	if (soap_envelope_begin_out(soap)
-		 || soap_putheader(soap)
-		 || soap_body_begin_out(soap)
-		 || wsnt__SubscribeResponse.soap_put(soap, "wsnt:SubscribeResponse", "")
-		 || soap_body_end_out(soap)
-		 || soap_envelope_end_out(soap))
-			 return soap->error;
-	};
-	if (soap_end_count(soap)
-	 || soap_response(soap, SOAP_OK)
-	 || soap_envelope_begin_out(soap)
-	 || soap_putheader(soap)
-	 || soap_body_begin_out(soap)
-	 || wsnt__SubscribeResponse.soap_put(soap, "wsnt:SubscribeResponse", "")
-	 || soap_body_end_out(soap)
-	 || soap_envelope_end_out(soap)
-	 || soap_end_send(soap))
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__GetCurrentMessage(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__GetCurrentMessage soap_tmp___tev__GetCurrentMessage;
-	_wsnt__GetCurrentMessageResponse wsnt__GetCurrentMessageResponse;
-	wsnt__GetCurrentMessageResponse.soap_default(soap);
-	soap_default___tev__GetCurrentMessage(soap, &soap_tmp___tev__GetCurrentMessage);
-	if (!soap_get___tev__GetCurrentMessage(soap, &soap_tmp___tev__GetCurrentMessage, "-tev:GetCurrentMessage", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->GetCurrentMessage(soap_tmp___tev__GetCurrentMessage.wsnt__GetCurrentMessage, &wsnt__GetCurrentMessageResponse);
-	if (soap->error)
-		return soap->error;
-	soap->encodingStyle = NULL;
-	soap_serializeheader(soap);
-	wsnt__GetCurrentMessageResponse.soap_serialize(soap);
-	if (soap_begin_count(soap))
-		return soap->error;
-	if (soap->mode & SOAP_IO_LENGTH)
-	{	if (soap_envelope_begin_out(soap)
-		 || soap_putheader(soap)
-		 || soap_body_begin_out(soap)
-		 || wsnt__GetCurrentMessageResponse.soap_put(soap, "wsnt:GetCurrentMessageResponse", "")
-		 || soap_body_end_out(soap)
-		 || soap_envelope_end_out(soap))
-			 return soap->error;
-	};
-	if (soap_end_count(soap)
-	 || soap_response(soap, SOAP_OK)
-	 || soap_envelope_begin_out(soap)
-	 || soap_putheader(soap)
-	 || soap_body_begin_out(soap)
-	 || wsnt__GetCurrentMessageResponse.soap_put(soap, "wsnt:GetCurrentMessageResponse", "")
-	 || soap_body_end_out(soap)
-	 || soap_envelope_end_out(soap)
-	 || soap_end_send(soap))
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__Notify(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__Notify soap_tmp___tev__Notify;
-	soap_default___tev__Notify(soap, &soap_tmp___tev__Notify);
-	if (!soap_get___tev__Notify(soap, &soap_tmp___tev__Notify, "-tev:Notify", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->Notify(soap_tmp___tev__Notify.wsnt__Notify);
-	if (soap->error)
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__GetMessages(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__GetMessages soap_tmp___tev__GetMessages;
-	_wsnt__GetMessagesResponse wsnt__GetMessagesResponse;
-	wsnt__GetMessagesResponse.soap_default(soap);
-	soap_default___tev__GetMessages(soap, &soap_tmp___tev__GetMessages);
-	if (!soap_get___tev__GetMessages(soap, &soap_tmp___tev__GetMessages, "-tev:GetMessages", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->GetMessages(soap_tmp___tev__GetMessages.wsnt__GetMessages, &wsnt__GetMessagesResponse);
-	if (soap->error)
-		return soap->error;
-	soap->encodingStyle = NULL;
-	soap_serializeheader(soap);
-	wsnt__GetMessagesResponse.soap_serialize(soap);
-	if (soap_begin_count(soap))
-		return soap->error;
-	if (soap->mode & SOAP_IO_LENGTH)
-	{	if (soap_envelope_begin_out(soap)
-		 || soap_putheader(soap)
-		 || soap_body_begin_out(soap)
-		 || wsnt__GetMessagesResponse.soap_put(soap, "wsnt:GetMessagesResponse", "")
-		 || soap_body_end_out(soap)
-		 || soap_envelope_end_out(soap))
-			 return soap->error;
-	};
-	if (soap_end_count(soap)
-	 || soap_response(soap, SOAP_OK)
-	 || soap_envelope_begin_out(soap)
-	 || soap_putheader(soap)
-	 || soap_body_begin_out(soap)
-	 || wsnt__GetMessagesResponse.soap_put(soap, "wsnt:GetMessagesResponse", "")
-	 || soap_body_end_out(soap)
-	 || soap_envelope_end_out(soap)
-	 || soap_end_send(soap))
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__DestroyPullPoint(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__DestroyPullPoint soap_tmp___tev__DestroyPullPoint;
-	_wsnt__DestroyPullPointResponse wsnt__DestroyPullPointResponse;
-	wsnt__DestroyPullPointResponse.soap_default(soap);
-	soap_default___tev__DestroyPullPoint(soap, &soap_tmp___tev__DestroyPullPoint);
-	if (!soap_get___tev__DestroyPullPoint(soap, &soap_tmp___tev__DestroyPullPoint, "-tev:DestroyPullPoint", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->DestroyPullPoint(soap_tmp___tev__DestroyPullPoint.wsnt__DestroyPullPoint, &wsnt__DestroyPullPointResponse);
-	if (soap->error)
-		return soap->error;
-	soap->encodingStyle = NULL;
-	soap_serializeheader(soap);
-	wsnt__DestroyPullPointResponse.soap_serialize(soap);
-	if (soap_begin_count(soap))
-		return soap->error;
-	if (soap->mode & SOAP_IO_LENGTH)
-	{	if (soap_envelope_begin_out(soap)
-		 || soap_putheader(soap)
-		 || soap_body_begin_out(soap)
-		 || wsnt__DestroyPullPointResponse.soap_put(soap, "wsnt:DestroyPullPointResponse", "")
-		 || soap_body_end_out(soap)
-		 || soap_envelope_end_out(soap))
-			 return soap->error;
-	};
-	if (soap_end_count(soap)
-	 || soap_response(soap, SOAP_OK)
-	 || soap_envelope_begin_out(soap)
-	 || soap_putheader(soap)
-	 || soap_body_begin_out(soap)
-	 || wsnt__DestroyPullPointResponse.soap_put(soap, "wsnt:DestroyPullPointResponse", "")
-	 || soap_body_end_out(soap)
-	 || soap_envelope_end_out(soap)
-	 || soap_end_send(soap))
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__Notify_(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__Notify_ soap_tmp___tev__Notify_;
-	soap_default___tev__Notify_(soap, &soap_tmp___tev__Notify_);
-	if (!soap_get___tev__Notify_(soap, &soap_tmp___tev__Notify_, "-tev:Notify", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->Notify_(soap_tmp___tev__Notify_.wsnt__Notify);
-	if (soap->error)
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__CreatePullPoint(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__CreatePullPoint soap_tmp___tev__CreatePullPoint;
-	_wsnt__CreatePullPointResponse wsnt__CreatePullPointResponse;
-	wsnt__CreatePullPointResponse.soap_default(soap);
-	soap_default___tev__CreatePullPoint(soap, &soap_tmp___tev__CreatePullPoint);
-	if (!soap_get___tev__CreatePullPoint(soap, &soap_tmp___tev__CreatePullPoint, "-tev:CreatePullPoint", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->CreatePullPoint(soap_tmp___tev__CreatePullPoint.wsnt__CreatePullPoint, &wsnt__CreatePullPointResponse);
-	if (soap->error)
-		return soap->error;
-	soap->encodingStyle = NULL;
-	soap_serializeheader(soap);
-	wsnt__CreatePullPointResponse.soap_serialize(soap);
-	if (soap_begin_count(soap))
-		return soap->error;
-	if (soap->mode & SOAP_IO_LENGTH)
-	{	if (soap_envelope_begin_out(soap)
-		 || soap_putheader(soap)
-		 || soap_body_begin_out(soap)
-		 || wsnt__CreatePullPointResponse.soap_put(soap, "wsnt:CreatePullPointResponse", "")
-		 || soap_body_end_out(soap)
-		 || soap_envelope_end_out(soap))
-			 return soap->error;
-	};
-	if (soap_end_count(soap)
-	 || soap_response(soap, SOAP_OK)
-	 || soap_envelope_begin_out(soap)
-	 || soap_putheader(soap)
-	 || soap_body_begin_out(soap)
-	 || wsnt__CreatePullPointResponse.soap_put(soap, "wsnt:CreatePullPointResponse", "")
-	 || soap_body_end_out(soap)
-	 || soap_envelope_end_out(soap)
-	 || soap_end_send(soap))
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__Renew_(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__Renew_ soap_tmp___tev__Renew_;
-	_wsnt__RenewResponse wsnt__RenewResponse;
-	wsnt__RenewResponse.soap_default(soap);
-	soap_default___tev__Renew_(soap, &soap_tmp___tev__Renew_);
-	if (!soap_get___tev__Renew_(soap, &soap_tmp___tev__Renew_, "-tev:Renew", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->Renew_(soap_tmp___tev__Renew_.wsnt__Renew, &wsnt__RenewResponse);
-	if (soap->error)
-		return soap->error;
-	soap->encodingStyle = NULL;
-	soap_serializeheader(soap);
-	wsnt__RenewResponse.soap_serialize(soap);
-	if (soap_begin_count(soap))
-		return soap->error;
-	if (soap->mode & SOAP_IO_LENGTH)
-	{	if (soap_envelope_begin_out(soap)
-		 || soap_putheader(soap)
-		 || soap_body_begin_out(soap)
-		 || wsnt__RenewResponse.soap_put(soap, "wsnt:RenewResponse", "")
-		 || soap_body_end_out(soap)
-		 || soap_envelope_end_out(soap))
-			 return soap->error;
-	};
-	if (soap_end_count(soap)
-	 || soap_response(soap, SOAP_OK)
-	 || soap_envelope_begin_out(soap)
-	 || soap_putheader(soap)
-	 || soap_body_begin_out(soap)
-	 || wsnt__RenewResponse.soap_put(soap, "wsnt:RenewResponse", "")
-	 || soap_body_end_out(soap)
-	 || soap_envelope_end_out(soap)
-	 || soap_end_send(soap))
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__Unsubscribe_(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__Unsubscribe_ soap_tmp___tev__Unsubscribe_;
-	_wsnt__UnsubscribeResponse wsnt__UnsubscribeResponse;
-	wsnt__UnsubscribeResponse.soap_default(soap);
-	soap_default___tev__Unsubscribe_(soap, &soap_tmp___tev__Unsubscribe_);
-	if (!soap_get___tev__Unsubscribe_(soap, &soap_tmp___tev__Unsubscribe_, "-tev:Unsubscribe", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->Unsubscribe_(soap_tmp___tev__Unsubscribe_.wsnt__Unsubscribe, &wsnt__UnsubscribeResponse);
-	if (soap->error)
-		return soap->error;
-	soap->encodingStyle = NULL;
-	soap_serializeheader(soap);
-	wsnt__UnsubscribeResponse.soap_serialize(soap);
-	if (soap_begin_count(soap))
-		return soap->error;
-	if (soap->mode & SOAP_IO_LENGTH)
-	{	if (soap_envelope_begin_out(soap)
-		 || soap_putheader(soap)
-		 || soap_body_begin_out(soap)
-		 || wsnt__UnsubscribeResponse.soap_put(soap, "wsnt:UnsubscribeResponse", "")
-		 || soap_body_end_out(soap)
-		 || soap_envelope_end_out(soap))
-			 return soap->error;
-	};
-	if (soap_end_count(soap)
-	 || soap_response(soap, SOAP_OK)
-	 || soap_envelope_begin_out(soap)
-	 || soap_putheader(soap)
-	 || soap_body_begin_out(soap)
-	 || wsnt__UnsubscribeResponse.soap_put(soap, "wsnt:UnsubscribeResponse", "")
-	 || soap_body_end_out(soap)
-	 || soap_envelope_end_out(soap)
-	 || soap_end_send(soap))
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__PauseSubscription(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__PauseSubscription soap_tmp___tev__PauseSubscription;
-	_wsnt__PauseSubscriptionResponse wsnt__PauseSubscriptionResponse;
-	wsnt__PauseSubscriptionResponse.soap_default(soap);
-	soap_default___tev__PauseSubscription(soap, &soap_tmp___tev__PauseSubscription);
-	if (!soap_get___tev__PauseSubscription(soap, &soap_tmp___tev__PauseSubscription, "-tev:PauseSubscription", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->PauseSubscription(soap_tmp___tev__PauseSubscription.wsnt__PauseSubscription, &wsnt__PauseSubscriptionResponse);
-	if (soap->error)
-		return soap->error;
-	soap->encodingStyle = NULL;
-	soap_serializeheader(soap);
-	wsnt__PauseSubscriptionResponse.soap_serialize(soap);
-	if (soap_begin_count(soap))
-		return soap->error;
-	if (soap->mode & SOAP_IO_LENGTH)
-	{	if (soap_envelope_begin_out(soap)
-		 || soap_putheader(soap)
-		 || soap_body_begin_out(soap)
-		 || wsnt__PauseSubscriptionResponse.soap_put(soap, "wsnt:PauseSubscriptionResponse", "")
-		 || soap_body_end_out(soap)
-		 || soap_envelope_end_out(soap))
-			 return soap->error;
-	};
-	if (soap_end_count(soap)
-	 || soap_response(soap, SOAP_OK)
-	 || soap_envelope_begin_out(soap)
-	 || soap_putheader(soap)
-	 || soap_body_begin_out(soap)
-	 || wsnt__PauseSubscriptionResponse.soap_put(soap, "wsnt:PauseSubscriptionResponse", "")
-	 || soap_body_end_out(soap)
-	 || soap_envelope_end_out(soap)
-	 || soap_end_send(soap))
-		return soap->error;
-	return soap_closesock(soap);
-}
-
-static int serve___tev__ResumeSubscription(PullPointSubscriptionBindingService *service)
-{	struct soap *soap = service->soap;
-	struct __tev__ResumeSubscription soap_tmp___tev__ResumeSubscription;
-	_wsnt__ResumeSubscriptionResponse wsnt__ResumeSubscriptionResponse;
-	wsnt__ResumeSubscriptionResponse.soap_default(soap);
-	soap_default___tev__ResumeSubscription(soap, &soap_tmp___tev__ResumeSubscription);
-	if (!soap_get___tev__ResumeSubscription(soap, &soap_tmp___tev__ResumeSubscription, "-tev:ResumeSubscription", NULL))
-		return soap->error;
-	if (soap_body_end_in(soap)
-	 || soap_envelope_end_in(soap)
-	 || soap_end_recv(soap))
-		return soap->error;
-	soap->error = service->ResumeSubscription(soap_tmp___tev__ResumeSubscription.wsnt__ResumeSubscription, &wsnt__ResumeSubscriptionResponse);
-	if (soap->error)
-		return soap->error;
-	soap->encodingStyle = NULL;
-	soap_serializeheader(soap);
-	wsnt__ResumeSubscriptionResponse.soap_serialize(soap);
-	if (soap_begin_count(soap))
-		return soap->error;
-	if (soap->mode & SOAP_IO_LENGTH)
-	{	if (soap_envelope_begin_out(soap)
-		 || soap_putheader(soap)
-		 || soap_body_begin_out(soap)
-		 || wsnt__ResumeSubscriptionResponse.soap_put(soap, "wsnt:ResumeSubscriptionResponse", "")
-		 || soap_body_end_out(soap)
-		 || soap_envelope_end_out(soap))
-			 return soap->error;
-	};
-	if (soap_end_count(soap)
-	 || soap_response(soap, SOAP_OK)
-	 || soap_envelope_begin_out(soap)
-	 || soap_putheader(soap)
-	 || soap_body_begin_out(soap)
-	 || wsnt__ResumeSubscriptionResponse.soap_put(soap, "wsnt:ResumeSubscriptionResponse", "")
 	 || soap_body_end_out(soap)
 	 || soap_envelope_end_out(soap)
 	 || soap_end_send(soap))

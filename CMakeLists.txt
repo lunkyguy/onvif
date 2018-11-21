@@ -1,7 +1,9 @@
 ﻿# CMake 最低版本号要求
-cmake_minimum_required (VERSION 2.8)
+cmake_minimum_required (VERSION 3.5)
 # 项目信息
 project (OpenCamera)
+#关闭 SAFESEH 选项
+set(CMAKE_EXE_LINKER_FLAGS "/SAFESEH:NO")
 #添加预处理器
 add_definitions(-DWITH_OPENSSL)
 # 添加包含目录

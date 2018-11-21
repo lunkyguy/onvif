@@ -41,11 +41,11 @@ class SOAP_CMAC DeviceBindingProxy
 	/// Disables and removes SOAP Header from message
 	virtual	void soap_noheader();
 	/// Put SOAP Header in message
-	virtual	void soap_header(char *wsa__MessageID, struct wsa__Relationship *wsa__RelatesTo, struct wsa__EndpointReferenceType *wsa__From, struct wsa__EndpointReferenceType *wsa__ReplyTo, struct wsa__EndpointReferenceType *wsa__FaultTo, char *wsa__To, char *wsa__Action, struct wsdd__AppSequenceType *wsdd__AppSequence, char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct wsrm__SequenceType *wsrm__Sequence, int __sizeAckRequested, struct wsrm__AckRequestedType *wsrm__AckRequested, int __sizeSequenceAcknowledgement, struct _wsrm__SequenceAcknowledgement *wsrm__SequenceAcknowledgement, struct wsrm__SequenceFaultType *wsrm__SequenceFault, struct _wsse__Security *wsse__Security);
+	virtual	void soap_header(char *wsa5__MessageID, struct wsa5__RelatesToType *wsa5__RelatesTo, struct wsa5__EndpointReferenceType *wsa5__From, struct wsa5__EndpointReferenceType *wsa5__ReplyTo, struct wsa5__EndpointReferenceType *wsa5__FaultTo, char *wsa5__To, char *wsa5__Action, struct chan__ChannelInstanceType *chan__ChannelInstance, struct _wsse__Security *wsse__Security);
 	/// Get SOAP Header structure (NULL when absent)
 	virtual	const SOAP_ENV__Header *soap_header();
 	/// Get SOAP Fault structure (NULL when absent)
-	/*virtual	const SOAP_ENV__Fault *soap_fault();*/
+	virtual	const SOAP_ENV__Fault *soap_fault();
 	/// Get SOAP Fault string (NULL when absent)
 	virtual	const char *soap_fault_string();
 	/// Get SOAP Fault detail as string (NULL when absent)
@@ -394,6 +394,38 @@ class SOAP_CMAC DeviceBindingProxy
 	virtual	int StartSystemRestore(_tds__StartSystemRestore *tds__StartSystemRestore, _tds__StartSystemRestoreResponse *tds__StartSystemRestoreResponse) { return this->StartSystemRestore(NULL, NULL, tds__StartSystemRestore, tds__StartSystemRestoreResponse); }
 	virtual	int StartSystemRestore(const char *endpoint, const char *soap_action, _tds__StartSystemRestore *tds__StartSystemRestore, _tds__StartSystemRestoreResponse *tds__StartSystemRestoreResponse);
 
+	/// Web service operation 'GetStorageConfigurations' (returns error code or SOAP_OK)
+	virtual	int GetStorageConfigurations(_tds__GetStorageConfigurations *tds__GetStorageConfigurations, _tds__GetStorageConfigurationsResponse *tds__GetStorageConfigurationsResponse) { return this->GetStorageConfigurations(NULL, NULL, tds__GetStorageConfigurations, tds__GetStorageConfigurationsResponse); }
+	virtual	int GetStorageConfigurations(const char *endpoint, const char *soap_action, _tds__GetStorageConfigurations *tds__GetStorageConfigurations, _tds__GetStorageConfigurationsResponse *tds__GetStorageConfigurationsResponse);
+
+	/// Web service operation 'CreateStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int CreateStorageConfiguration(_tds__CreateStorageConfiguration *tds__CreateStorageConfiguration, _tds__CreateStorageConfigurationResponse *tds__CreateStorageConfigurationResponse) { return this->CreateStorageConfiguration(NULL, NULL, tds__CreateStorageConfiguration, tds__CreateStorageConfigurationResponse); }
+	virtual	int CreateStorageConfiguration(const char *endpoint, const char *soap_action, _tds__CreateStorageConfiguration *tds__CreateStorageConfiguration, _tds__CreateStorageConfigurationResponse *tds__CreateStorageConfigurationResponse);
+
+	/// Web service operation 'GetStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int GetStorageConfiguration(_tds__GetStorageConfiguration *tds__GetStorageConfiguration, _tds__GetStorageConfigurationResponse *tds__GetStorageConfigurationResponse) { return this->GetStorageConfiguration(NULL, NULL, tds__GetStorageConfiguration, tds__GetStorageConfigurationResponse); }
+	virtual	int GetStorageConfiguration(const char *endpoint, const char *soap_action, _tds__GetStorageConfiguration *tds__GetStorageConfiguration, _tds__GetStorageConfigurationResponse *tds__GetStorageConfigurationResponse);
+
+	/// Web service operation 'SetStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int SetStorageConfiguration(_tds__SetStorageConfiguration *tds__SetStorageConfiguration, _tds__SetStorageConfigurationResponse *tds__SetStorageConfigurationResponse) { return this->SetStorageConfiguration(NULL, NULL, tds__SetStorageConfiguration, tds__SetStorageConfigurationResponse); }
+	virtual	int SetStorageConfiguration(const char *endpoint, const char *soap_action, _tds__SetStorageConfiguration *tds__SetStorageConfiguration, _tds__SetStorageConfigurationResponse *tds__SetStorageConfigurationResponse);
+
+	/// Web service operation 'DeleteStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int DeleteStorageConfiguration(_tds__DeleteStorageConfiguration *tds__DeleteStorageConfiguration, _tds__DeleteStorageConfigurationResponse *tds__DeleteStorageConfigurationResponse) { return this->DeleteStorageConfiguration(NULL, NULL, tds__DeleteStorageConfiguration, tds__DeleteStorageConfigurationResponse); }
+	virtual	int DeleteStorageConfiguration(const char *endpoint, const char *soap_action, _tds__DeleteStorageConfiguration *tds__DeleteStorageConfiguration, _tds__DeleteStorageConfigurationResponse *tds__DeleteStorageConfigurationResponse);
+
+	/// Web service operation 'GetGeoLocation' (returns error code or SOAP_OK)
+	virtual	int GetGeoLocation(_tds__GetGeoLocation *tds__GetGeoLocation, _tds__GetGeoLocationResponse *tds__GetGeoLocationResponse) { return this->GetGeoLocation(NULL, NULL, tds__GetGeoLocation, tds__GetGeoLocationResponse); }
+	virtual	int GetGeoLocation(const char *endpoint, const char *soap_action, _tds__GetGeoLocation *tds__GetGeoLocation, _tds__GetGeoLocationResponse *tds__GetGeoLocationResponse);
+
+	/// Web service operation 'SetGeoLocation' (returns error code or SOAP_OK)
+	virtual	int SetGeoLocation(_tds__SetGeoLocation *tds__SetGeoLocation, _tds__SetGeoLocationResponse *tds__SetGeoLocationResponse) { return this->SetGeoLocation(NULL, NULL, tds__SetGeoLocation, tds__SetGeoLocationResponse); }
+	virtual	int SetGeoLocation(const char *endpoint, const char *soap_action, _tds__SetGeoLocation *tds__SetGeoLocation, _tds__SetGeoLocationResponse *tds__SetGeoLocationResponse);
+
+	/// Web service operation 'DeleteGeoLocation' (returns error code or SOAP_OK)
+	virtual	int DeleteGeoLocation(_tds__DeleteGeoLocation *tds__DeleteGeoLocation, _tds__DeleteGeoLocationResponse *tds__DeleteGeoLocationResponse) { return this->DeleteGeoLocation(NULL, NULL, tds__DeleteGeoLocation, tds__DeleteGeoLocationResponse); }
+	virtual	int DeleteGeoLocation(const char *endpoint, const char *soap_action, _tds__DeleteGeoLocation *tds__DeleteGeoLocation, _tds__DeleteGeoLocationResponse *tds__DeleteGeoLocationResponse);
+
 	/// Web service operation 'GetServices' (returns error code or SOAP_OK)
 	virtual	int GetServices_(_tds__GetServices *tds__GetServices, _tds__GetServicesResponse *tds__GetServicesResponse) { return this->GetServices_(NULL, NULL, tds__GetServices, tds__GetServicesResponse); }
 	virtual	int GetServices_(const char *endpoint, const char *soap_action, _tds__GetServices *tds__GetServices, _tds__GetServicesResponse *tds__GetServicesResponse);
@@ -721,5 +753,37 @@ class SOAP_CMAC DeviceBindingProxy
 	/// Web service operation 'StartSystemRestore' (returns error code or SOAP_OK)
 	virtual	int StartSystemRestore_(_tds__StartSystemRestore *tds__StartSystemRestore, _tds__StartSystemRestoreResponse *tds__StartSystemRestoreResponse) { return this->StartSystemRestore_(NULL, NULL, tds__StartSystemRestore, tds__StartSystemRestoreResponse); }
 	virtual	int StartSystemRestore_(const char *endpoint, const char *soap_action, _tds__StartSystemRestore *tds__StartSystemRestore, _tds__StartSystemRestoreResponse *tds__StartSystemRestoreResponse);
+
+	/// Web service operation 'GetStorageConfigurations' (returns error code or SOAP_OK)
+	virtual	int GetStorageConfigurations_(_tds__GetStorageConfigurations *tds__GetStorageConfigurations, _tds__GetStorageConfigurationsResponse *tds__GetStorageConfigurationsResponse) { return this->GetStorageConfigurations_(NULL, NULL, tds__GetStorageConfigurations, tds__GetStorageConfigurationsResponse); }
+	virtual	int GetStorageConfigurations_(const char *endpoint, const char *soap_action, _tds__GetStorageConfigurations *tds__GetStorageConfigurations, _tds__GetStorageConfigurationsResponse *tds__GetStorageConfigurationsResponse);
+
+	/// Web service operation 'CreateStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int CreateStorageConfiguration_(_tds__CreateStorageConfiguration *tds__CreateStorageConfiguration, _tds__CreateStorageConfigurationResponse *tds__CreateStorageConfigurationResponse) { return this->CreateStorageConfiguration_(NULL, NULL, tds__CreateStorageConfiguration, tds__CreateStorageConfigurationResponse); }
+	virtual	int CreateStorageConfiguration_(const char *endpoint, const char *soap_action, _tds__CreateStorageConfiguration *tds__CreateStorageConfiguration, _tds__CreateStorageConfigurationResponse *tds__CreateStorageConfigurationResponse);
+
+	/// Web service operation 'GetStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int GetStorageConfiguration_(_tds__GetStorageConfiguration *tds__GetStorageConfiguration, _tds__GetStorageConfigurationResponse *tds__GetStorageConfigurationResponse) { return this->GetStorageConfiguration_(NULL, NULL, tds__GetStorageConfiguration, tds__GetStorageConfigurationResponse); }
+	virtual	int GetStorageConfiguration_(const char *endpoint, const char *soap_action, _tds__GetStorageConfiguration *tds__GetStorageConfiguration, _tds__GetStorageConfigurationResponse *tds__GetStorageConfigurationResponse);
+
+	/// Web service operation 'SetStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int SetStorageConfiguration_(_tds__SetStorageConfiguration *tds__SetStorageConfiguration, _tds__SetStorageConfigurationResponse *tds__SetStorageConfigurationResponse) { return this->SetStorageConfiguration_(NULL, NULL, tds__SetStorageConfiguration, tds__SetStorageConfigurationResponse); }
+	virtual	int SetStorageConfiguration_(const char *endpoint, const char *soap_action, _tds__SetStorageConfiguration *tds__SetStorageConfiguration, _tds__SetStorageConfigurationResponse *tds__SetStorageConfigurationResponse);
+
+	/// Web service operation 'DeleteStorageConfiguration' (returns error code or SOAP_OK)
+	virtual	int DeleteStorageConfiguration_(_tds__DeleteStorageConfiguration *tds__DeleteStorageConfiguration, _tds__DeleteStorageConfigurationResponse *tds__DeleteStorageConfigurationResponse) { return this->DeleteStorageConfiguration_(NULL, NULL, tds__DeleteStorageConfiguration, tds__DeleteStorageConfigurationResponse); }
+	virtual	int DeleteStorageConfiguration_(const char *endpoint, const char *soap_action, _tds__DeleteStorageConfiguration *tds__DeleteStorageConfiguration, _tds__DeleteStorageConfigurationResponse *tds__DeleteStorageConfigurationResponse);
+
+	/// Web service operation 'GetGeoLocation' (returns error code or SOAP_OK)
+	virtual	int GetGeoLocation_(_tds__GetGeoLocation *tds__GetGeoLocation, _tds__GetGeoLocationResponse *tds__GetGeoLocationResponse) { return this->GetGeoLocation_(NULL, NULL, tds__GetGeoLocation, tds__GetGeoLocationResponse); }
+	virtual	int GetGeoLocation_(const char *endpoint, const char *soap_action, _tds__GetGeoLocation *tds__GetGeoLocation, _tds__GetGeoLocationResponse *tds__GetGeoLocationResponse);
+
+	/// Web service operation 'SetGeoLocation' (returns error code or SOAP_OK)
+	virtual	int SetGeoLocation_(_tds__SetGeoLocation *tds__SetGeoLocation, _tds__SetGeoLocationResponse *tds__SetGeoLocationResponse) { return this->SetGeoLocation_(NULL, NULL, tds__SetGeoLocation, tds__SetGeoLocationResponse); }
+	virtual	int SetGeoLocation_(const char *endpoint, const char *soap_action, _tds__SetGeoLocation *tds__SetGeoLocation, _tds__SetGeoLocationResponse *tds__SetGeoLocationResponse);
+
+	/// Web service operation 'DeleteGeoLocation' (returns error code or SOAP_OK)
+	virtual	int DeleteGeoLocation_(_tds__DeleteGeoLocation *tds__DeleteGeoLocation, _tds__DeleteGeoLocationResponse *tds__DeleteGeoLocationResponse) { return this->DeleteGeoLocation_(NULL, NULL, tds__DeleteGeoLocation, tds__DeleteGeoLocationResponse); }
+	virtual	int DeleteGeoLocation_(const char *endpoint, const char *soap_action, _tds__DeleteGeoLocation *tds__DeleteGeoLocation, _tds__DeleteGeoLocationResponse *tds__DeleteGeoLocationResponse);
 };
 #endif
